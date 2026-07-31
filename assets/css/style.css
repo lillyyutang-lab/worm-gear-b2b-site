@@ -183,14 +183,15 @@ img {
 
 .feature-row {
   display: flex;
-  gap: 28px;
+  gap: 35px;
   margin: 34px 0;
+  flex-wrap: nowrap;
 }
 
 .feature-item {
-  border-left: 1px solid rgba(255, 255, 255, .25);
-  padding-left: 18px;
-  font-weight: 700;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .hero-actions {
