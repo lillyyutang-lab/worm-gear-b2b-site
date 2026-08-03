@@ -676,8 +676,21 @@ img {
   }
 }
 
-/* Fixed Floating Buttons */
-.whatsapp-float {
+/* Full-width Banner Sections */
+#contact-hero, #about {
+  padding: 0;
+  width: 100%;
+}
+
+#contact-hero img, #about img {
+  width: 100%;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
   position: fixed !important;
   bottom: 20px !important;
   left: 20px !important;
