@@ -57,18 +57,31 @@ img {
   gap: 25px;
 }
 
-.brand img {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--blue);
   font-weight: 900;
+}
+
+.brand img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  font-size: 34px;
+  line-height: .8;
+  letter-spacing: 1px;
+}
+
+.brand-text small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-top: 8px;
 }
 
 .menu {
@@ -239,8 +252,6 @@ img {
 }
 
 .product-card,
-.app-card,
-.why-card,
 .news-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -283,30 +294,6 @@ img {
 .product-card .btn {
   margin-top: auto;
   align-self: flex-start;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-
-.why-card {
-  text-align: center;
-  padding: 28px 18px;
-}
-
-.why-card .big-icon {
-  font-size: 42px;
-  color: var(--blue);
-  margin-bottom: 12px;
-}
-
-.why-card h3 {
-  font-size: 16px;
-  color: #073f8f;
-  line-height: 1.25;
-  text-transform: uppercase;
 }
 
 .news-grid {
@@ -525,6 +512,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-boxes,
   .news-grid {
     grid-template-columns: 1fr;
@@ -537,6 +528,9 @@ img {
 }
 
 @media(max-width:560px) {
+  .brand-text {
+    font-size: 26px;
+  }
 
   .hero h1 {
     font-size: 30px;
@@ -547,8 +541,10 @@ img {
   }
 
   .products-grid,
-  .apps-grid,
   .why-grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
 
   .feature-row {
     grid-template-columns: 1fr;
@@ -586,6 +582,7 @@ img {
   box-shadow: none !important;
   margin: 0 !important;
 }
+
 .whatsapp-float {
   position: fixed !important;
   bottom: 20px !important;
