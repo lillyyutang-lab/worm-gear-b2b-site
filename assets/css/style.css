@@ -285,75 +285,6 @@ img {
   align-self: flex-start;
 }
 
-.apps-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-}
-
-.app-card {
-  text-align: center;
-}
-
-.app-card img {
-  width: 100%;
-  height: 155px;
-  object-fit: cover;
-}
-
-.app-card .icon {
-  width: 54px;
-  height: 54px;
-  background: var(--blue);
-  color: #fff;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 24px;
-  margin: -28px auto 12px;
-  position: relative;
-}
-
-.app-card h3 {
-  font-size: 14px;
-  color: #073f8f;
-  margin: 0 10px 8px;
-  text-transform: uppercase;
-}
-
-.app-card p {
-  font-size: 13px;
-  color: #4d5b73;
-  margin: 0 14px 18px;
-}
-
-.stats {
-  background: linear-gradient(90deg, #004aae, #0068d8);
-  border-radius: 10px;
-  color: #fff;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin: 34px 0 20px;
-  overflow: hidden;
-}
-
-.stat {
-  padding: 24px;
-  text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, .35);
-}
-
-.stat:last-child {
-  border-right: 0;
-}
-
-.stat b {
-  font-size: 32px;
-  display: block;
-}
-
 .why-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -376,31 +307,6 @@ img {
   color: #073f8f;
   line-height: 1.25;
   text-transform: uppercase;
-}
-
-.about-split {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 38px;
-  align-items: center;
-}
-
-.factory-card {
-  background: linear-gradient(135deg, #eaf3ff, #fff);
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  min-height: 260px;
-}
-
-.factory-visual {
-  height: 220px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #0b4da2, #7fc3ff);
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: 64px;
 }
 
 .news-grid {
@@ -427,7 +333,7 @@ img {
 }
 
 .news-card small {
-  color: #888;
+  color: #595959;
 }
 
 .news-card h3 {
@@ -613,18 +519,10 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .apps-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .about-split,
   .footer-grid,
   .product-list {
     grid-template-columns: 1fr;
-  }
-
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-boxes,
@@ -651,9 +549,6 @@ img {
   .products-grid,
   .apps-grid,
   .why-grid,
-  .stats {
-    grid-template-columns: 1fr;
-  }
 
   .feature-row {
     grid-template-columns: 1fr;
