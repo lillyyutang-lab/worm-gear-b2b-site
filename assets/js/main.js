@@ -30,3 +30,22 @@ document.querySelectorAll('a[href*="wa.me/"]').forEach((link)=>{
   whatsappUrl.searchParams.set('text',whatsappGreeting);
   link.href=whatsappUrl.toString();
 });
+
+
+// Accessible back-to-top control shared by every page.
+const backToTop=document.createElement('button');
+backToTop.className='back-to-top';
+backToTop.type='button';
+backToTop.setAttribute('aria-label','Back to top');
+backToTop.setAttribute('title','Back to top');
+backToTop.innerHTML='<span aria-hidden="true">&#8593;</span>';
+document.body.appendChild(backToTop);
+
+const updateBackToTop=()=>{
+  backToTop.classList.toggle('is-visible',window.scrollY>400);
+};
+window.addEventListener('scroll',updateBackToTop,{passive:true});
+updateBackToTop();
+backToTop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
