@@ -6,7 +6,7 @@
   <title>Contact SMK Transmission | Gearbox & Motor Inquiries</title>
   <meta name="description" content="Contact SMK Transmission for worm gearbox, hypoid gearbox, gear motor and electric motor selection, quotations and OEM inquiries.">
   <link rel="canonical" href="https://www.smktrans.com/contact.html">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260806-3">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260806-4">
   <meta property="og:title" content="Contact SMK Transmission">
   <meta property="og:description" content="Request product selection support and a quotation from SMK Transmission.">
   <meta property="og:url" content="https://www.smktrans.com/contact.html">
@@ -33,36 +33,48 @@
     </section>
 
     <form class="form" id="contact-form">
-      <div class="form-heading"><span>REQUEST A QUOTE</span><h2>Tell Us What You Need</h2><p>Complete the details below and prepare an email inquiry to our sales team.</p></div>
+      <div class="form-heading"><span>REQUEST A QUOTE</span><h2>Tell Us What You Need</h2><p>Complete the details below. Your inquiry will be sent directly to our sales team.</p></div>
       <div class="form-row"><label>Name *<input name="name" placeholder="Your name" required></label><label>Email *<input name="email" type="email" placeholder="name@company.com" required></label></div>
       <div class="form-row"><label>WhatsApp<input name="whatsapp" placeholder="+ country code and number"></label><label>Product<select name="product"><option>Worm Gear Reducer</option><option>Hypoid Gear Reducer</option><option>Electric Motor</option><option>Gear Motor</option><option>Other</option></select></label></div>
-      <label>Requirements *<textarea name="message" placeholder="Please include motor power, input speed, required output speed or ratio, torque, mounting position and quantity." required></textarea></label>
+      <label>Requirements *<textarea name="message" maxlength="5000" placeholder="Please include motor power, input speed, required output speed or ratio, torque, mounting position and quantity." required></textarea></label>
+      <label class="form-honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
       <button class="btn" type="submit">SEND INQUIRY VIA EMAIL</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </main>
 
 <footer class="footer"><div class="container"><div class="footer-grid"><div><h3>SMK Transmission</h3><p>Manufacturer of gear reducers and electric motors since 2010.</p></div><div><h3>Products</h3><a href="product-worm-gear-reducer.html">Worm Gear Reducers</a><a href="product-hypoid-gear-reducer.html">Hypoid Gear Reducers</a><a href="product-electric-motor.html">Electric Motors</a><a href="product-gear-motor.html">Gear Motors</a></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="news.html">Knowledge Center</a></div><div><h3>Contact</h3><p><a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a></p><p><a class="whatsapp-link" href="https://wa.me/8615262579178">+86 152 6257 9178</a></p></div></div><div class="copy">&copy; 2026 SMK Transmission.</div></div></footer>
-<script src="assets/js/main.js?v=20260806-3" defer></script>
+<script src="assets/js/main.js?v=20260806-4" defer></script>
 <script>
-document.getElementById('contact-form').addEventListener('submit',function(event){
+document.getElementById('contact-form').addEventListener('submit',async function(event){
   event.preventDefault();
-  const data=new FormData(this);
-  const subject='SMK Product Inquiry - '+data.get('product');
-  const body=[
-    "Hello SMK,",
-    "",
-    "I’m interested in your products. Please review my inquiry details below:",
-    "",
-    "Name: "+data.get('name'),
-    "Email: "+data.get('email'),
-    "WhatsApp: "+(data.get('whatsapp')||'Not provided'),
-    "Product: "+data.get('product'),
-    "Requirements: "+data.get('message'),
-    "",
-    "Please recommend a suitable model and provide a quotation."
-  ].join("\n");
-  window.location.href='mailto:lillyyutang@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  const form=this;
+  const button=form.querySelector('button[type="submit"]');
+  const status=document.getElementById('form-status');
+  const data=Object.fromEntries(new FormData(form).entries());
+  button.disabled=true;
+  button.textContent='SENDING...';
+  status.className='form-status';
+  status.textContent='Sending your inquiry securely...';
+  try {
+    const response=await fetch('/api/send-inquiry',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    });
+    const result=await response.json().catch(function(){return {};});
+    if(!response.ok) throw new Error(result.error||'Unable to send your inquiry.');
+    form.reset();
+    status.className='form-status success';
+    status.textContent='Thank you! Your inquiry has been sent successfully. We will contact you soon.';
+  } catch(error) {
+    status.className='form-status error';
+    status.textContent=error.message+' You can also email lillyyutang@gmail.com.';
+  } finally {
+    button.disabled=false;
+    button.textContent='SEND INQUIRY VIA EMAIL';
+  }
 });
 </script>
 </body>
