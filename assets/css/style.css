@@ -877,3 +877,17 @@ details p { margin: 10px 0 0; }
   .product-showcase { grid-template-columns: 1fr; gap: 28px; }
   .product-showcase h2 { font-size: 27px; }
 }
+/* Four newly added catalog products: preserve each source image ratio. */
+.catalog-product-image {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto 18px;
+  background: #fff;
+}
+
+@media(max-width:700px) {
+  .catalog-product-image { height: min(72vw, 340px); }
+}
