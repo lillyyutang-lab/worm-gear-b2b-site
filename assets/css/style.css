@@ -763,3 +763,55 @@ details p { margin: 10px 0 0; }
   .whatsapp-float,
   .quote-float { animation: none !important; }
 }
+
+
+/* Contact page simplification and final floating-action polish */
+.contact-layout { max-width: 1040px; }
+.contact-box h2 { margin: 10px 0 4px; color: #073f8f; font-size: 20px; }
+.contact-box p { margin: 0 0 10px; color: var(--muted); }
+.contact-card-icon { width: 48px; height: 48px; margin: 0 auto; display: grid; place-items: center; border-radius: 14px; background: #eaf3ff; color: var(--blue); font-size: 15px; font-weight: 900; }
+.form-heading { margin-bottom: 8px; }
+.form-heading span { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: 1.5px; }
+.form-heading h2 { color: #073f8f; margin: 3px 0; }
+.form-heading p { color: var(--muted); margin: 0; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form label { color: #293854; font-size: 14px; font-weight: 800; }
+.form label input, .form label select, .form label textarea { margin-top: 6px; font-weight: 400; }
+
+.whatsapp-float {
+  width: 58px !important;
+  height: 58px !important;
+  border: 0 !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22), 0 0 22px rgba(37,211,102,.54) !important;
+  animation: whatsappGlowSoft 2.8s ease-in-out infinite !important;
+}
+
+.whatsapp-float .float-icon {
+  width: 46px;
+  height: 46px;
+  background: transparent;
+}
+
+.quote-float {
+  min-width: 196px;
+  height: 50px !important;
+  border: 0 !important;
+  box-shadow: 0 9px 26px rgba(0,0,0,.22), 0 0 22px rgba(17,201,103,.42) !important;
+  animation: quoteGlowSoft 2.8s ease-in-out infinite .35s !important;
+}
+
+@keyframes whatsappGlowSoft {
+  0%,100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(37,211,102,0)); }
+  50% { transform: scale(1.045); filter: drop-shadow(0 0 9px rgba(37,211,102,.55)); }
+}
+
+@keyframes quoteGlowSoft {
+  0%,100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(17,201,103,0)); }
+  50% { transform: scale(1.025); filter: drop-shadow(0 0 8px rgba(17,201,103,.4)); }
+}
+
+@media(max-width:700px) {
+  .form-row { grid-template-columns: 1fr; }
+  .page-hero { padding: 62px 0; }
+  .page-hero h1 { font-size: 34px; line-height: 1.15; }
+}
