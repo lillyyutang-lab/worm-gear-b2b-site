@@ -1,5 +1,6 @@
 const RECIPIENT = 'lillyyutang@gmail.com';
-const FROM = 'SMK Transmission <inquiry@smktrans.com>';
+const EMAIL_DOMAIN = process.env.RESEND_EMAIL_DOMAIN || 'smktrans.com';
+const FROM = 'SMK Transmission <inquiry@' + EMAIL_DOMAIN + '>';
 
 function clean(value, maxLength) {
   return String(value || '').trim().slice(0, maxLength);
