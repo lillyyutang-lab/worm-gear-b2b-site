@@ -635,3 +635,16 @@ img {
   height: auto !important;
   display: block !important;
 }
+
+
+/* Readable GEO/SEO content additions; reuses the existing visual system. */
+.readable { max-width: 900px; }
+.readable h2 { color: #073f8f; margin-top: 36px; line-height: 1.25; }
+.readable h2:first-child { margin-top: 0; }
+.readable li { margin: 8px 0; }
+.wide-image { width: 100%; height: auto; margin: 28px auto 0; border-radius: 10px; box-shadow: var(--shadow); }
+.product-feature-image { width: min(403px, 100%); height: auto; margin: 0 auto 30px; }
+details { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin: 12px 0; }
+summary { color: #073f8f; font-weight: 800; cursor: pointer; }
+details p { margin: 10px 0 0; }
+.entity-copy { padding-top: 58px; padding-bottom: 58px; }
