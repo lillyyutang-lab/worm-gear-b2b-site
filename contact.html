@@ -33,11 +33,11 @@
     </section>
 
     <form class="form" id="contact-form">
-      <div class="form-heading"><span>REQUEST A QUOTE</span><h2>Tell Us What You Need</h2><p>Complete the details below and continue the conversation on WhatsApp.</p></div>
+      <div class="form-heading"><span>REQUEST A QUOTE</span><h2>Tell Us What You Need</h2><p>Complete the details below and prepare an email inquiry to our sales team.</p></div>
       <div class="form-row"><label>Name *<input name="name" placeholder="Your name" required></label><label>Email *<input name="email" type="email" placeholder="name@company.com" required></label></div>
       <div class="form-row"><label>WhatsApp<input name="whatsapp" placeholder="+ country code and number"></label><label>Product<select name="product"><option>Worm Gear Reducer</option><option>Hypoid Gear Reducer</option><option>Electric Motor</option><option>Gear Motor</option><option>Other</option></select></label></div>
       <label>Requirements *<textarea name="message" placeholder="Please include motor power, input speed, required output speed or ratio, torque, mounting position and quantity." required></textarea></label>
-      <button class="btn" type="submit">SEND INQUIRY VIA WHATSAPP</button>
+      <button class="btn" type="submit">SEND INQUIRY VIA EMAIL</button>
     </form>
   </div>
 </main>
@@ -48,15 +48,21 @@
 document.getElementById('contact-form').addEventListener('submit',function(event){
   event.preventDefault();
   const data=new FormData(this);
-  const message=[
-    "Hello SMK, I’m interested in your gearboxes and electric motors.",
+  const subject='SMK Product Inquiry - '+data.get('product');
+  const body=[
+    "Hello SMK,",
+    "",
+    "I’m interested in your products. Please review my inquiry details below:",
+    "",
     "Name: "+data.get('name'),
     "Email: "+data.get('email'),
     "WhatsApp: "+(data.get('whatsapp')||'Not provided'),
     "Product: "+data.get('product'),
-    "Requirements: "+data.get('message')
+    "Requirements: "+data.get('message'),
+    "",
+    "Please recommend a suitable model and provide a quotation."
   ].join("\n");
-  window.open('https://wa.me/8615262579178?text='+encodeURIComponent(message),'_blank','noopener');
+  window.location.href='mailto:lillyyutang@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });
 </script>
 </body>
