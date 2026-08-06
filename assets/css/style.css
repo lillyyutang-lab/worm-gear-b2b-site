@@ -862,3 +862,18 @@ details p { margin: 10px 0 0; }
   .article-table { display: block; overflow-x: auto; }
   .formula-box { font-size: 18px; }
 }
+
+
+/* NMRV + UDL variable-speed gear motor */
+.product-showcase { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 48px; }
+.product-main-photo { width: 100%; border-radius: 14px; box-shadow: var(--shadow); }
+.product-label { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: 1.5px; }
+.product-showcase h2 { color: #073f8f; font-size: 32px; line-height: 1.2; }
+.dimension-sheet { width: min(1070px, 100%); margin: 0 auto 30px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.dimension-table-wrap { overflow-x: auto; }
+.dimension-table { min-width: 1000px; font-size: 13px; }
+.dimension-note { color: var(--muted); font-size: 13px; }
+@media(max-width:850px) {
+  .product-showcase { grid-template-columns: 1fr; gap: 28px; }
+  .product-showcase h2 { font-size: 27px; }
+}
