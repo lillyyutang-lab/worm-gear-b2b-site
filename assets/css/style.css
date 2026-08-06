@@ -838,3 +838,27 @@ details p { margin: 10px 0 0; }
 }
 .form-status.success { color: #08783d; }
 .form-status.error { color: #b42318; }
+
+
+/* AI-readable engineering article */
+.article-hero { padding: 72px 0; }
+.article-hero .article-kicker { margin: 0 0 8px; font-size: 12px; font-weight: 900; letter-spacing: 2px; color: #b9d7ff; }
+.article-body { background: #fff; padding: 42px 48px; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
+.article-meta { color: var(--muted); font-size: 14px; }
+.answer-box { margin: 24px 0; padding: 20px 22px; border-left: 5px solid var(--blue); border-radius: 8px; background: #edf5ff; color: #123b70; }
+.article-toc { display: grid; gap: 7px; margin: 28px 0; padding: 22px; background: #f7faff; border: 1px solid var(--border); border-radius: 10px; }
+.article-toc a, .article-body > p a { color: var(--blue); font-weight: 800; }
+.formula-box { margin: 18px 0; padding: 20px; text-align: center; background: #061c42; color: #fff; border-radius: 10px; font-size: 22px; }
+.formula-box span { font-size: 13px; color: #c9d9ef; }
+.article-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 15px; }
+.article-table th, .article-table td { padding: 12px 14px; border: 1px solid #d8e3f1; text-align: left; vertical-align: top; }
+.article-table th { background: #eaf3ff; color: #073f8f; }
+.article-table tr:nth-child(even) td { background: #fafcff; }
+.article-sources { margin-top: 38px; padding: 24px; background: #f7f9fc; border-radius: 10px; }
+.article-sources h2 { margin-top: 0; font-size: 21px; }
+.article-sources a { color: var(--blue); }
+@media(max-width:700px) {
+  .article-body { padding: 26px 20px; }
+  .article-table { display: block; overflow-x: auto; }
+  .formula-box { font-size: 18px; }
+}
