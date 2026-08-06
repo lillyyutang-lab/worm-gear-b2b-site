@@ -567,13 +567,14 @@ img {
   }
 }
 
-/* Full-width Banner Sections */
-#contact-hero, #about, .testimonials-full {
+
+/* Full-width Banner Sections (Contact & Page Headers) */
+#contact-hero {
   padding: 0;
   width: 100%;
 }
 
-#contact-hero > img, #about > img, .testimonials-full > a, .testimonials-full img {
+#contact-hero > img {
   width: 100% !important;
   max-width: 100% !important;
   height: auto;
@@ -582,6 +583,22 @@ img {
   box-shadow: none !important;
   margin: 0 !important;
 }
+
+/* Page header banners (About Us page) */
+.page-header-banner {
+  padding: 0;
+  width: 100%;
+}
+
+.page-header-banner img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+
+
 
 .whatsapp-float {
   position: fixed !important;
