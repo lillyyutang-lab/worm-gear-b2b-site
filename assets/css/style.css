@@ -1316,6 +1316,7 @@ details p { margin: 10px 0 0; }
   background: #0a3263;
   font-size: 12px;
   font-weight: 900;
+  object-fit: cover;
 }
 .home-testimonial-author div { display: grid; min-width: 0; }
 .home-testimonial-author strong { color: #fff; font-size: 14px; }
