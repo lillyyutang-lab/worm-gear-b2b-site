@@ -1,3 +1,50 @@
+// Google Analytics 4: central tracking for every page that loads this shared script.
+const gaMeasurementId='G-PTT0KLBYK6';
+window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+window.gtag('js',new Date());
+window.gtag('config',gaMeasurementId);
+
+if(!document.querySelector('script[data-smk-ga4]')){
+  const gaScript=document.createElement('script');
+  gaScript.async=true;
+  gaScript.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(gaMeasurementId);
+  gaScript.dataset.smkGa4='true';
+  document.head.appendChild(gaScript);
+}
+
+function trackAnalyticsEvent(eventName,eventParameters){
+  window.gtag('event',eventName,eventParameters||{});
+}
+
+document.addEventListener('click',(event)=>{
+  const link=event.target.closest('a');
+  if(!link) return;
+
+  const href=link.getAttribute('href')||'';
+  const label=(link.textContent||link.getAttribute('aria-label')||'').trim().replace(/\s+/g,' ').slice(0,100);
+  const pagePath=window.location.pathname;
+
+  if(link.classList.contains('quote-float')||/get a (free )?quote|request a quote|request selection support/i.test(label)){
+    trackAnalyticsEvent('quote_click',{link_text:label,page_path:pagePath,destination:href});
+    return;
+  }
+
+  if(href.includes('wa.me/')||link.classList.contains('whatsapp-link')||link.classList.contains('whatsapp-float')){
+    trackAnalyticsEvent('whatsapp_click',{link_text:label,page_path:pagePath});
+    return;
+  }
+
+  if(/\.pdf(?:$|[?#])/i.test(href)){
+    trackAnalyticsEvent('catalog_download',{file_name:href.split('/').pop().split(/[?#]/)[0],link_text:label,page_path:pagePath});
+    return;
+  }
+
+  if(/(?:^|\/)product-[^/?#]+\.html(?:$|[?#])/i.test(href)){
+    trackAnalyticsEvent('product_detail_click',{product_page:href.split(/[?#]/)[0],link_text:label,page_path:pagePath});
+  }
+});
+
 const toggle=document.querySelector('.mobile-toggle');
 const menu=document.querySelector('.menu');
 if(toggle&&menu){toggle.addEventListener('click',()=>menu.classList.toggle('open'));}

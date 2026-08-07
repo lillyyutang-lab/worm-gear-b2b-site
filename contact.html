@@ -67,6 +67,16 @@ document.getElementById('contact-form').addEventListener('submit',async function
     });
     const result=await response.json().catch(function(){return {};});
     if(!response.ok) throw new Error(result.error||'Unable to send your inquiry.');
+    if(typeof trackAnalyticsEvent==='function'){
+      trackAnalyticsEvent('generate_lead',{
+        form_name:'contact_inquiry',
+        product:data.product||'',
+        product_model:data.productModel||data.product_model||'',
+        ratio:data.ratio||'',
+        motor_power:data.motorPower||data.motor_power||'',
+        quantity:data.quantity||''
+      });
+    }
     form.reset();
     status.className='form-status success';
     status.textContent='Thank you! Your inquiry has been sent successfully. We will contact you soon.';
