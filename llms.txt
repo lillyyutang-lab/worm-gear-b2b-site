@@ -18,11 +18,16 @@ SMK products are used in conveyors, packaging machinery, food-processing equipme
 
 ## Factory and services
 
-SMK Transmission has manufactured power transmission products since 2010. Services include model selection, ratio and mounting configuration, motor matching, technical drawings, OEM branding, ODM support and export supply.
+SMK Transmission operates a power transmission manufacturing facility in Jiangsu, China. The factory page includes a direct factory video and an overview of manufacturing coordination, assembly, inspection, configuration support and export preparation.
+
+Factory page and video: https://www.smktrans.com/factory.html
+
+Services include model selection, ratio and mounting configuration, motor matching, technical drawings, OEM branding, ODM support and export supply.
 
 ## Key pages
 
 - About SMK: https://www.smktrans.com/about.html
+- SMK factory in Jiangsu, China: https://www.smktrans.com/factory.html
 - Product overview: https://www.smktrans.com/products.html
 - Gearbox knowledge center: https://www.smktrans.com/news.html
 - Contact: https://www.smktrans.com/contact.html

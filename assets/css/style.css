@@ -1134,3 +1134,70 @@ details p { margin: 10px 0 0; }
   .home-applications-grid { grid-template-columns:1fr; }
   .application-card { min-height:auto; padding:24px 22px; }
 }
+
+/* Jiangsu Factory page and About-page factory teaser */
+.about-factory-teaser { position:relative; overflow:hidden; padding:82px 0; color:#fff; background:linear-gradient(115deg,#041b3d,#075eae); }
+.about-factory-teaser::before { content:""; position:absolute; right:-130px; top:-170px; width:430px; height:430px; border:1px solid rgba(255,255,255,.1); border-radius:50%; box-shadow:0 0 0 60px rgba(255,255,255,.025); }
+.about-factory-teaser-grid { position:relative; z-index:1; display:grid; grid-template-columns:.9fr 1.1fr; align-items:center; gap:62px; }
+.about-factory-teaser .about-kicker { color:#7cc9ff; }
+.about-factory-teaser h2 { margin:0 0 18px; font-size:36px; line-height:1.18; }
+.about-factory-teaser p:not(.about-kicker) { margin:0 0 25px; color:#cfe1f5; line-height:1.78; }
+.about-factory-visual { min-height:300px; display:flex; align-items:flex-end; gap:15px; padding:28px; border:1px solid rgba(255,255,255,.2); border-radius:18px; background:radial-gradient(circle at 66% 35%,rgba(85,184,255,.28),transparent 31%),linear-gradient(145deg,#0a4d91,#032754); box-shadow:0 25px 55px rgba(0,0,0,.24); }
+.about-factory-play { width:60px; height:60px; display:grid; place-items:center; padding-left:4px; border:1px solid rgba(255,255,255,.75); border-radius:50%; color:#fff; background:rgba(255,255,255,.12); font-size:20px; box-shadow:0 0 25px rgba(75,181,255,.42); }
+.about-factory-visual div { display:grid; }
+.about-factory-visual small { color:#8fcdf8; font-size:10px; font-weight:900; letter-spacing:1.6px; }
+.about-factory-visual strong { color:#fff; font-size:22px; }
+
+.factory-hero { position:relative; overflow:hidden; padding:102px 0; color:#fff; background:linear-gradient(118deg,#031a3d 0%,#043b7c 60%,#0870c7 100%); }
+.factory-hero::before { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 80% 35%,rgba(112,202,255,.25),transparent 28%),linear-gradient(115deg,transparent 0 67%,rgba(255,255,255,.06) 67% 68%,transparent 68%); }
+.factory-hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:70px; }
+.factory-kicker { margin:0 0 10px; color:#0870d8; font-size:12px; font-weight:900; letter-spacing:2px; }
+.factory-hero .factory-kicker,.factory-capabilities .factory-kicker { color:#7cc9ff; }
+.factory-hero h1 { margin:0; font-size:57px; line-height:1.04; text-transform:uppercase; }
+.factory-hero h1 span { color:#79c9ff; }
+.factory-hero-grid > div:first-child > p:not(.factory-kicker) { max-width:620px; margin:24px 0 29px; color:#d5e8fb; font-size:18px; line-height:1.78; }
+.factory-hero-actions { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.factory-light-btn { color:#064587 !important; border-color:#fff; background:#fff; }
+.factory-text-link { color:#fff; font-size:14px; font-weight:900; }
+.factory-text-link span { display:inline-block; margin-left:6px; }
+.factory-location-card { padding:34px; border:1px solid rgba(255,255,255,.28); border-radius:18px; background:rgba(3,26,59,.72); box-shadow:0 25px 55px rgba(0,0,0,.24); backdrop-filter:blur(8px); }
+.factory-location-card span { color:#83cdfc; font-size:11px; font-weight:900; letter-spacing:1.7px; }
+.factory-location-card strong { display:block; margin:8px 0; color:#fff; font-size:32px; }
+.factory-location-card p { margin:0; color:#b9d5ef; }
+.factory-video-section { padding:88px 0 96px; background:#fff; }
+.factory-section-heading { display:grid; grid-template-columns:1fr 1fr; align-items:end; gap:65px; margin-bottom:32px; }
+.factory-section-heading h2 { margin:0; color:#073f8f; font-size:38px; line-height:1.18; text-transform:uppercase; }
+.factory-section-heading > p { margin:0; color:#60708a; line-height:1.75; }
+.factory-video-frame { overflow:hidden; padding:10px; border:1px solid #d5e5f5; border-radius:18px; background:#061c42; box-shadow:0 25px 60px rgba(4,45,100,.18); }
+.factory-video-frame video { width:100%; max-height:680px; display:block; border-radius:11px; background:#020914; object-fit:contain; }
+.factory-capabilities { padding:88px 0 96px; color:#fff; background:linear-gradient(130deg,#041b3d,#073f83); }
+.factory-heading-light h2 { color:#fff; }
+.factory-heading-light > p { color:#c6dcef; }
+.factory-capability-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.factory-capability-grid article { min-height:250px; padding:28px 24px; border:1px solid rgba(255,255,255,.15); border-radius:14px; background:rgba(255,255,255,.07); }
+.factory-capability-grid article > span { display:grid; place-items:center; width:48px; height:48px; margin-bottom:22px; border-radius:12px; color:#fff; background:#0874d7; font-size:13px; font-weight:900; }
+.factory-capability-grid h3 { margin:0 0 11px; font-size:19px; }
+.factory-capability-grid p { margin:0; color:#bcd3e9; font-size:14px; line-height:1.75; }
+.factory-contact { padding:66px 0; background:#f3f8ff; }
+.factory-contact-inner { display:flex; align-items:center; justify-content:space-between; gap:45px; }
+.factory-contact h2 { margin:0 0 8px; color:#073f8f; font-size:31px; }
+.factory-contact p:not(.factory-kicker) { margin:0; color:#60708a; }
+.factory-whatsapp { padding:12px 18px; border:1px solid #0c9e52; border-radius:7px; color:#0b8a49; font-weight:900; white-space:nowrap; }
+@media(max-width:900px) {
+  .about-factory-teaser-grid,.factory-hero-grid,.factory-section-heading { grid-template-columns:1fr; }
+  .factory-capability-grid { grid-template-columns:repeat(2,1fr); }
+  .factory-contact-inner { align-items:flex-start; flex-direction:column; }
+}
+@media(max-width:560px) {
+  .about-factory-teaser { padding:60px 0; }
+  .about-factory-teaser-grid { gap:32px; }
+  .about-factory-teaser h2 { font-size:29px; }
+  .about-factory-visual { min-height:225px; }
+  .factory-hero { padding:68px 0; }
+  .factory-hero h1 { font-size:39px; }
+  .factory-video-section,.factory-capabilities { padding:60px 0 66px; }
+  .factory-section-heading { gap:15px; }
+  .factory-section-heading h2 { font-size:30px; }
+  .factory-capability-grid { grid-template-columns:1fr; }
+  .factory-capability-grid article { min-height:auto; }
+}
