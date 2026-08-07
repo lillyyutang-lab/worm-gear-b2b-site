@@ -97,6 +97,19 @@ img {
   border-bottom: 3px solid transparent;
 }
 
+.menu .catalog-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.catalog-nav-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: #e53935;
+}
+
 .menu a:hover,
 .menu .active {
   color: var(--blue);
