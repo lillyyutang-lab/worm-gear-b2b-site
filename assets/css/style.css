@@ -1078,3 +1078,29 @@ details p { margin: 10px 0 0; }
   .home-about-photo img { height:270px; }
   .home-about-float-card { left:10px; right:10px; bottom:0; min-width:0; }
 }
+
+/* Refined industrial-buyer proof section */
+.buyers-proof { position:relative; overflow:hidden; padding:86px 0 94px; background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 100%); }
+.buyers-proof::before { content:""; position:absolute; right:-170px; top:-190px; width:500px; height:500px; border:1px solid rgba(0,74,174,.08); border-radius:50%; box-shadow:0 0 0 65px rgba(0,74,174,.025),0 0 0 130px rgba(0,74,174,.018); pointer-events:none; }
+.buyers-proof-heading { position:relative; z-index:1; display:flex; align-items:end; justify-content:space-between; gap:44px; margin-bottom:36px; }
+.buyers-proof-kicker { margin:0 0 7px; color:#0870d8; font-size:12px; font-weight:900; letter-spacing:2px; }
+.buyers-proof-heading h2 { margin:0; color:#073f8f; font-size:38px; line-height:1.12; text-transform:uppercase; }
+.buyers-proof-heading > p { max-width:510px; margin:0 0 3px; color:#60708a; font-size:15px; line-height:1.7; }
+.buyers-proof-grid { position:relative; z-index:1; display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.buyers-proof-card { position:relative; min-height:168px; display:grid; grid-template-columns:62px 1fr; align-items:start; gap:20px; padding:30px 30px 28px; overflow:hidden; border:1px solid #dce8f6; border-radius:14px; background:rgba(255,255,255,.94); box-shadow:0 9px 28px rgba(4,45,100,.075); transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease; }
+.buyers-proof-card::after { content:""; position:absolute; left:0; bottom:0; width:0; height:3px; background:linear-gradient(90deg,#006ed6,#52baff); transition:width .28s ease; }
+.buyers-proof-card:hover { transform:translateY(-4px); border-color:#a7ccee; box-shadow:0 17px 36px rgba(4,45,100,.13); }
+.buyers-proof-card:hover::after { width:100%; }
+.buyers-proof-number { width:56px; height:56px; display:grid; place-items:center; border:1px solid #c7ddf5; border-radius:14px; color:#0870d8; background:linear-gradient(145deg,#f4f9ff,#e5f1ff); font-size:15px; font-weight:900; box-shadow:inset 0 0 0 5px rgba(255,255,255,.56); }
+.buyers-proof-card h3 { margin:2px 0 9px; color:#10264d; font-size:19px; line-height:1.3; }
+.buyers-proof-card p { margin:0; color:#586780; font-size:15px; line-height:1.7; }
+@media(max-width:800px) {
+  .buyers-proof-heading { align-items:start; flex-direction:column; gap:14px; }
+  .buyers-proof-grid { grid-template-columns:1fr; }
+}
+@media(max-width:560px) {
+  .buyers-proof { padding:58px 0 64px; }
+  .buyers-proof-heading h2 { font-size:30px; }
+  .buyers-proof-card { min-height:auto; grid-template-columns:48px 1fr; gap:15px; padding:23px 20px; }
+  .buyers-proof-number { width:46px; height:46px; border-radius:11px; }
+}
