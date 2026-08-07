@@ -1142,7 +1142,10 @@ details p { margin: 10px 0 0; }
 .about-factory-teaser .about-kicker { color:#7cc9ff; }
 .about-factory-teaser h2 { margin:0 0 18px; font-size:36px; line-height:1.18; }
 .about-factory-teaser p:not(.about-kicker) { margin:0 0 25px; color:#cfe1f5; line-height:1.78; }
-.about-factory-visual { min-height:300px; display:flex; align-items:flex-end; gap:15px; padding:28px; border:1px solid rgba(255,255,255,.2); border-radius:18px; background:radial-gradient(circle at 66% 35%,rgba(85,184,255,.28),transparent 31%),linear-gradient(145deg,#0a4d91,#032754); box-shadow:0 25px 55px rgba(0,0,0,.24); }
+.about-factory-visual { position:relative; min-height:300px; display:flex; align-items:flex-end; gap:15px; overflow:hidden; padding:28px; border:1px solid rgba(255,255,255,.2); border-radius:18px; background:#032754; box-shadow:0 25px 55px rgba(0,0,0,.24); }
+.about-factory-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(3,25,56,.05) 35%,rgba(3,25,56,.82) 100%); }
+.about-factory-visual > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.about-factory-visual .about-factory-play,.about-factory-visual > div { position:relative; z-index:1; }
 .about-factory-play { width:60px; height:60px; display:grid; place-items:center; padding-left:4px; border:1px solid rgba(255,255,255,.75); border-radius:50%; color:#fff; background:rgba(255,255,255,.12); font-size:20px; box-shadow:0 0 25px rgba(75,181,255,.42); }
 .about-factory-visual div { display:grid; }
 .about-factory-visual small { color:#8fcdf8; font-size:10px; font-weight:900; letter-spacing:1.6px; }
