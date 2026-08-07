@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worm Gearbox Ratio & Torque Calculation Guide | SMK</title>
+  <meta name="description" content="Calculate worm gearbox ratio, output speed and torque with practical formulas, a worked example, service-factor guidance and an engineering selection checklist.">
+  <link rel="canonical" href="https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260806-5">
+  <meta property="og:title" content="Worm Gearbox Ratio and Torque Calculation Guide">
+  <meta property="og:description" content="A practical engineering guide to worm gearbox speed, ratio, torque, service factor and final selection.">
+  <meta property="og:url" content="https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://www.smktrans.com/assets/images/worm-gear-specs.webp">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "@id":"https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html#article",
+        "headline":"Worm Gearbox Ratio and Torque Calculation: A Practical Selection Guide",
+        "description":"Calculate worm gearbox ratio, output speed and torque, then apply service factor and application checks.",
+        "datePublished":"2026-08-06",
+        "dateModified":"2026-08-06",
+        "author":{"@type":"Organization","name":"SMK Transmission","url":"https://www.smktrans.com/"},
+        "publisher":{"@type":"Organization","name":"SMK Transmission","url":"https://www.smktrans.com/","logo":{"@type":"ImageObject","url":"https://www.smktrans.com/assets/images/logo.webp"}},
+        "mainEntityOfPage":"https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html",
+        "image":"https://www.smktrans.com/assets/images/worm-gear-specs.webp",
+        "about":["worm gearbox ratio","gearbox output torque","worm gear reducer selection","service factor"]
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"How do you calculate worm gearbox ratio?","acceptedAnswer":{"@type":"Answer","text":"Divide input speed by required output speed: ratio i = n1 / n2. A 1400 rpm motor and a required output speed near 47 rpm indicate a ratio of about 30:1."}},
+          {"@type":"Question","name":"How do you estimate worm gearbox output torque?","acceptedAnswer":{"@type":"Answer","text":"Use M2 = 9550 × P1 × efficiency / n2, where P1 is input power in kW, n2 is output speed in rpm and M2 is output torque in Nm. Use the selected manufacturer's efficiency and rating data for final verification."}},
+          {"@type":"Question","name":"Should gearbox torque be multiplied by a service factor?","acceptedAnswer":{"@type":"Answer","text":"Yes. Required rated torque should account for duty, operating hours, starts, shock loading and application conditions. Service-factor definitions can differ by manufacturer, so verify the selected unit against its catalog."}},
+          {"@type":"Question","name":"Is motor power alone enough to select a worm gearbox?","acceptedAnswer":{"@type":"Answer","text":"No. Selection also requires output speed and torque, duty cycle, service factor, peak loads, mounting position, radial and axial loads, ambient conditions and thermal capacity."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="topbar"><div class="container nav"><a class="brand" href="index.html"><img src="assets/images/logo.webp" alt="SMK Transmission" width="87" height="50" loading="eager"></a><button class="mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button><nav class="menu"><a href="index.html">HOME</a><a href="products.html">PRODUCTS</a><a href="index.html#applications">APPLICATIONS</a><a href="about.html">ABOUT US</a><a class="active" href="news.html">NEWS</a><a href="contact.html">CONTACT US</a><a href="assets/docs/NMRV-Catalogue.pdf" target="_blank" rel="noopener noreferrer">CATALOG</a></nav><a class="quote-btn" href="contact.html">GET A QUOTE</a></div></header>
+
+<section class="page-hero article-hero"><div class="container"><p class="article-kicker">GEARBOX KNOWLEDGE CENTER</p><h1>Worm Gearbox Ratio and Torque Calculation</h1><p>A practical selection guide for engineers, OEM buyers and machine builders</p></div></section>
+
+<main class="content light">
+<article class="container readable article-body">
+  <p class="article-meta">Published August 6, 2026 · Reviewed by SMK Transmission</p>
+  <div class="answer-box"><strong>Quick answer:</strong> Calculate ratio with <strong>i = n1 ÷ n2</strong>. Estimate output torque with <strong>M2 = 9550 × P1 × η ÷ n2</strong>. Then select a gearbox whose permitted output torque satisfies the required service factor and whose thermal, shaft-load and mounting limits suit the application.</div>
+
+  <p>A worm gearbox cannot be selected reliably from motor power alone. A sound selection begins with the required machine speed and load torque, then checks operating hours, starts per hour, shock loading, mounting position, ambient conditions and external shaft loads. The formulas below are useful for preliminary sizing; the final model must be verified against the manufacturer's selection tables.</p>
+
+  <nav class="article-toc" aria-label="Article contents">
+    <strong>In this guide</strong>
+    <a href="#ratio">1. Gear ratio and output speed</a>
+    <a href="#torque">2. Output torque</a>
+    <a href="#example">3. Worked calculation</a>
+    <a href="#service-factor">4. Service factor</a>
+    <a href="#checks">5. Final selection checks</a>
+  </nav>
+
+  <h2 id="ratio">1. How to calculate worm gearbox ratio and output speed</h2>
+  <p>The nominal reduction ratio is the input speed divided by the output speed:</p>
+  <div class="formula-box"><strong>i = n1 ÷ n2</strong><br><span>i = gear ratio, n1 = input speed in rpm, n2 = output speed in rpm</span></div>
+  <p>If a motor runs at 1400 rpm and the machine needs approximately 47 rpm, the required ratio is 1400 ÷ 47 ≈ 29.8. A nominal 30:1 gearbox is the logical starting point. Conversely, output speed can be estimated as:</p>
+  <div class="formula-box"><strong>n2 = n1 ÷ i</strong></div>
+  <p>Always check the exact catalog ratio. The actual output speed can differ slightly from a rounded nominal ratio, and motor speed varies with load and motor design.</p>
+
+  <h2 id="torque">2. How to estimate output torque</h2>
+  <p>For metric units, preliminary output torque can be estimated from input power, output speed and gearbox efficiency:</p>
+  <div class="formula-box"><strong>M2 = 9550 × P1 × η ÷ n2</strong><br><span>M2 = output torque in Nm, P1 = input power in kW, η = gearbox efficiency as a decimal</span></div>
+  <p>Efficiency must not be guessed for final sizing. Worm gearbox efficiency changes with ratio, geometry, lubrication, speed, temperature and running condition. Use the efficiency or output-torque data supplied for the specific gearbox. The gearbox's permitted output torque—not the calculated ideal torque—is the controlling value.</p>
+
+  <h2 id="example">3. Worked example</h2>
+  <p>Assume the preliminary application data are:</p>
+  <table class="article-table">
+    <thead><tr><th>Input</th><th>Example value</th></tr></thead>
+    <tbody>
+      <tr><td>Motor power</td><td>0.75 kW</td></tr>
+      <tr><td>Motor speed</td><td>1400 rpm</td></tr>
+      <tr><td>Nominal ratio</td><td>30:1</td></tr>
+      <tr><td>Example efficiency for calculation</td><td>0.75 (verify with selected model)</td></tr>
+      <tr><td>Required service factor</td><td>1.5 (example only)</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Step 1 — Output speed:</strong> n2 = 1400 ÷ 30 = 46.7 rpm.</p>
+  <p><strong>Step 2 — Estimated output torque:</strong> M2 = 9550 × 0.75 × 0.75 ÷ 46.7 ≈ 115 Nm.</p>
+  <p><strong>Step 3 — Preliminary rated-torque target:</strong> 115 × 1.5 ≈ 173 Nm.</p>
+  <p>This result does not automatically identify a gearbox size. The selected model must provide adequate permitted continuous and peak torque at the relevant input speed and ratio. It must also pass thermal and shaft-load checks. If the actual machine requires 115 Nm at the load—not merely the estimated motor-derived torque—apply the appropriate service factor to that measured or calculated load requirement.</p>
+
+  <h2 id="service-factor">4. Why service factor matters</h2>
+  <p>Service factor represents additional gearbox capacity relative to the application demand. A conveyor running eight hours with uniform loading does not impose the same duty as a mixer with repeated starts and shock loads, even if their average power is similar.</p>
+  <p>Consider at least:</p>
+  <ul>
+    <li>operating hours per day and duty cycle;</li>
+    <li>starts, stops, reversals and braking frequency;</li>
+    <li>uniform, moderate-shock or heavy-shock loading;</li>
+    <li>load inertia and acceleration torque;</li>
+    <li>ambient temperature and ventilation;</li>
+    <li>personnel safety and whether a separate brake is required.</li>
+  </ul>
+  <p>Service-factor definitions are not fully interchangeable between manufacturers. Use the tables and calculation method belonging to the gearbox being selected rather than comparing a single service-factor number across unrelated catalogs.</p>
+
+  <h2 id="checks">5. Final worm gearbox selection checklist</h2>
+  <table class="article-table">
+    <thead><tr><th>Check</th><th>Information required</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Speed</td><td>Input rpm, required output rpm and ratio</td><td>Defines the operating point</td></tr>
+      <tr><td>Torque</td><td>Continuous, starting and peak torque</td><td>Prevents mechanical overload</td></tr>
+      <tr><td>Duty</td><td>Hours/day, starts/hour and load pattern</td><td>Determines service requirement</td></tr>
+      <tr><td>Thermal capacity</td><td>Ambient temperature, ventilation and duty cycle</td><td>Limits heat-related performance</td></tr>
+      <tr><td>Shaft loading</td><td>Sprocket, pulley or coupling forces and position</td><td>Protects bearings and output shaft</td></tr>
+      <tr><td>Installation</td><td>Mounting position, flange, hollow/solid shaft</td><td>Affects fit and lubrication</td></tr>
+      <tr><td>Environment</td><td>Dust, washdown, corrosion, altitude and temperature</td><td>Determines seals, coating and derating</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What information should you send a gearbox manufacturer?</h2>
+  <p>For a faster and more accurate recommendation, provide motor power and speed, target output speed or ratio, continuous and peak torque, operating hours, starts per hour, mounting position, shaft dimensions, quantity and application conditions. Photographs or a dimensional drawing are useful when replacing an existing unit.</p>
+  <p><a href="product-worm-gear-reducer.html">View SMK NMRV worm gear reducers</a> or <a href="contact.html">send your application data to SMK Transmission</a> for model-selection support.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>How do you calculate worm gearbox ratio?</summary><p>Divide input speed by required output speed: i = n1 ÷ n2. A 1400 rpm motor and an output speed near 47 rpm indicate a ratio of about 30:1.</p></details>
+  <details><summary>How do you estimate worm gearbox output torque?</summary><p>Use M2 = 9550 × P1 × efficiency ÷ n2 for metric units. Final selection must use the chosen manufacturer's efficiency and permitted output-torque data.</p></details>
+  <details><summary>Should torque be multiplied by a service factor?</summary><p>Yes. Account for duty, starts, shock, inertia and operating conditions, but use the service-factor method published for the selected gearbox.</p></details>
+  <details><summary>Is motor power enough to select a worm gearbox?</summary><p>No. Speed, continuous and peak torque, thermal capacity, mounting, shaft loads and environmental conditions must also be checked.</p></details>
+
+  <aside class="article-sources"><h2>Engineering references</h2><p>The calculation method and selection cautions are consistent with current manufacturer engineering guidance:</p><ul><li><a href="https://www.nord.com/media/documents/bw/g1000_ie3_60hz_en_us_6001803_4023_a.pdf" rel="nofollow noopener" target="_blank">NORD Gear Unit Selection and Metric Formulas</a></li><li><a href="https://download.sew-eurodrive.com/download/html/33346739/en-EN/38925667595.html" rel="nofollow noopener" target="_blank">SEW-EURODRIVE Service Factor Guidance</a></li></ul></aside>
+</article>
+</main>
+
+<section class="cta"><div class="container"><div><h2>Need help selecting a worm gearbox?</h2><p>Send SMK your speed, torque, duty and mounting requirements.</p></div><a class="btn outline" href="contact.html">REQUEST SELECTION SUPPORT</a></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>SMK Transmission</h3><p>Manufacturer of gear reducers and electric motors since 2010.</p></div><div><h3>Products</h3><a href="product-worm-gear-reducer.html">Worm Gear Reducers</a><a href="product-hypoid-gear-reducer.html">Hypoid Gear Reducers</a><a href="product-electric-motor.html">Electric Motors</a></div><div><h3>Knowledge</h3><a href="news.html">Knowledge Center</a><a href="news-how-to-select-worm-gearbox.html">Selection Guide</a></div><div><h3>Contact</h3><a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a><a class="whatsapp-link" href="https://wa.me/8615262579178">+86 152 6257 9178</a></div></div><div class="copy">&copy; 2026 SMK Transmission.</div></div></footer>
+<script src="assets/js/main.js?v=20260806-5" defer></script>
+</body>
+</html>
