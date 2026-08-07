@@ -39,10 +39,14 @@ module.exports = async function handler(req, res) {
   const email = clean(payload.email, 254);
   const whatsapp = clean(payload.whatsapp, 80);
   const product = clean(payload.product, 120);
+  const model = clean(payload.model, 120);
+  const ratio = clean(payload.ratio, 60);
+  const motorPower = clean(payload.motorPower, 60);
+  const quantity = clean(payload.quantity, 20);
   const message = clean(payload.message, 5000);
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!name || !emailPattern.test(email) || !product || !message) {
+  if (!name || !emailPattern.test(email) || !product || !quantity || !/^\d+$/.test(quantity) || Number(quantity) < 1 || !message) {
     return res.status(400).json({ error: 'Please complete all required fields with a valid email address.' });
   }
 
@@ -51,6 +55,10 @@ module.exports = async function handler(req, res) {
     email: escapeHtml(email),
     whatsapp: escapeHtml(whatsapp || 'Not provided'),
     product: escapeHtml(product),
+    model: escapeHtml(model || 'Not specified'),
+    ratio: escapeHtml(ratio || 'Not specified'),
+    motorPower: escapeHtml(motorPower || 'Not specified'),
+    quantity: escapeHtml(quantity),
     message: escapeHtml(message).replace(/\n/g, '<br>')
   };
   const subject = 'SMK Product Inquiry - ' + product;
@@ -61,6 +69,10 @@ module.exports = async function handler(req, res) {
     'Email: ' + email,
     'WhatsApp: ' + (whatsapp || 'Not provided'),
     'Product: ' + product,
+    'Product Model: ' + (model || 'Not specified'),
+    'Ratio: ' + (ratio || 'Not specified'),
+    'Motor Power: ' + (motorPower || 'Not specified'),
+    'Quantity: ' + quantity,
     '',
     'Requirements:',
     message
@@ -84,6 +96,10 @@ module.exports = async function handler(req, res) {
           '<p><strong>Email:</strong> ' + safe.email + '</p>' +
           '<p><strong>WhatsApp:</strong> ' + safe.whatsapp + '</p>' +
           '<p><strong>Product:</strong> ' + safe.product + '</p>' +
+          '<p><strong>Product Model:</strong> ' + safe.model + '</p>' +
+          '<p><strong>Ratio:</strong> ' + safe.ratio + '</p>' +
+          '<p><strong>Motor Power:</strong> ' + safe.motorPower + '</p>' +
+          '<p><strong>Quantity:</strong> ' + safe.quantity + '</p>' +
           '<p><strong>Requirements:</strong><br>' + safe.message + '</p>'
       })
     });
