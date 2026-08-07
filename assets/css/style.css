@@ -569,12 +569,12 @@ img {
 
 
 /* Full-width Banner Sections (Contact & Page Headers) */
-#contact-hero {
+#contact-hero, #about, #testimonials {
   padding: 0;
   width: 100%;
 }
 
-#contact-hero > img {
+#contact-hero > img, #about > img, #testimonials img {
   width: 100% !important;
   max-width: 100% !important;
   height: auto;
