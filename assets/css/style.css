@@ -1372,3 +1372,626 @@ details p { margin: 10px 0 0; }
 .compliance-item-wide{grid-column:1/-1}.compliance-test-icon{background:#0a7693}
 @media(max-width:900px){.quality-compliance-panel{grid-template-columns:1fr;gap:30px;padding:32px}.quality-compliance{padding:60px 0}}
 @media(max-width:560px){.quality-compliance-panel{padding:24px 18px;border-radius:15px}.quality-compliance-grid{grid-template-columns:1fr}.compliance-item-wide{grid-column:auto}.quality-compliance h2{font-size:30px}}
+
+
+/* =====================================================================
+   Mobile commerce visual system — 2026-08-10
+   A single final override for consistent 320–700px presentation.
+   Desktop styles remain unchanged.
+   ===================================================================== */
+@media (max-width: 700px) {
+  :root {
+    --mobile-gutter: 18px;
+    --mobile-radius: 16px;
+    --mobile-section-space: 56px;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 68px;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    padding-bottom: 72px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    padding-inline: var(--mobile-gutter);
+  }
+
+  /* Compact storefront header and full-width, thumb-friendly menu */
+  .nav {
+    height: 64px;
+    gap: 12px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand img {
+    width: auto;
+    height: 42px;
+    max-width: 88px;
+    object-fit: contain;
+  }
+
+  .mobile-toggle {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-left: auto;
+    padding: 0;
+    border: 1px solid #d9e5f3;
+    border-radius: 12px;
+    color: #074fa8;
+    background: #f8fbff;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .topbar .quote-btn {
+    display: none !important;
+  }
+
+  .menu {
+    top: 64px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-height: calc(100svh - 80px);
+    overflow-y: auto;
+    padding: 10px;
+    gap: 2px;
+    border: 1px solid #dce6f2;
+    border-radius: 0 0 16px 16px;
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 20px 45px rgba(4, 34, 74, .18);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .menu a,
+  .menu .catalog-nav-link {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .menu a:hover,
+  .menu .active {
+    border: 0;
+    color: #064da4;
+    background: #edf5ff;
+  }
+
+  /* Editorial hero: strong hierarchy without an oversized first screen */
+  .hero {
+    min-height: 590px;
+    align-items: flex-end;
+    background: #041b3d;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+    object-position: 62% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(2, 17, 42, .2) 0%, rgba(2, 17, 42, .74) 48%, rgba(2, 17, 42, .97) 100%),
+      linear-gradient(90deg, rgba(2, 17, 42, .56), transparent 70%);
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 78px 0 46px;
+  }
+
+  .hero h1 {
+    max-width: 11.5em;
+    margin: 0 0 16px;
+    font-size: clamp(34px, 9.4vw, 44px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+
+  .hero h2 {
+    margin-bottom: 18px;
+    font-size: clamp(19px, 5.2vw, 24px);
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+
+  .hero p {
+    max-width: 34em;
+    margin: 7px 0;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 14px;
+    margin: 24px 0 28px;
+  }
+
+  .feature-item {
+    min-width: 0;
+    white-space: normal;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Consistent button size across product, content and conversion areas */
+  .btn,
+  .quote-btn {
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .btn.small {
+    min-height: 44px;
+    padding: 11px 16px;
+  }
+
+  /* Mobile section rhythm and type scale */
+  .section,
+  .content {
+    padding: var(--mobile-section-space) 0;
+  }
+
+  .page-hero {
+    padding: 64px 0 58px;
+  }
+
+  .page-hero h1,
+  .section-title h2,
+  .home-about-copy h2,
+  .home-applications-heading h2,
+  .home-testimonials-heading h2,
+  .real-factory-heading h2,
+  .buyers-proof-heading h2,
+  .about-section-heading h2 {
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(34px, 9vw, 42px);
+  }
+
+  .section-title {
+    margin-bottom: 28px;
+  }
+
+  .section-title p,
+  .page-hero p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* Product listing: one card per row, complete product image, clear CTA */
+  .products-grid,
+  .product-list,
+  .news-grid,
+  .contact-boxes,
+  .home-applications-grid,
+  .home-testimonials-grid,
+  .real-factory-grid,
+  .factory-photo-grid,
+  .product-factory-grid,
+  .buyers-proof-grid,
+  .about-capability-grid,
+  .about-stats-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px;
+  }
+
+  .product-card,
+  .product-detail,
+  .news-card,
+  .contact-box,
+  .home-testimonial-card,
+  .real-factory-card,
+  .factory-photo-card {
+    border-radius: var(--mobile-radius);
+    box-shadow: 0 10px 28px rgba(5, 51, 112, .09);
+  }
+
+  .product-card {
+    min-width: 0;
+    padding: 16px 16px 18px;
+  }
+
+  .product-card img,
+  .catalog-product-image {
+    width: 100%;
+    height: auto !important;
+    max-height: 270px;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto 16px;
+    object-fit: contain !important;
+    object-position: center;
+  }
+
+  .product-card h3 {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  .product-card .sub {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .product-card p {
+    margin-bottom: 17px;
+    font-size: 15px;
+  }
+
+  .product-card .btn,
+  .product-detail .btn {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .product-detail {
+    padding: 20px 18px;
+  }
+
+  .product-detail h2 {
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 1.22;
+  }
+
+  /* News cards and long-form articles */
+  .news-card {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .news-thumb {
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    font-size: 30px;
+  }
+
+  .news-card h3 {
+    margin: 4px 0 8px;
+    font-size: 17px;
+  }
+
+  .readable {
+    max-width: 100%;
+  }
+
+  .readable h1 {
+    font-size: clamp(31px, 8.5vw, 40px);
+    line-height: 1.12;
+  }
+
+  .readable h2 {
+    margin-top: 38px;
+    font-size: 25px;
+    line-height: 1.22;
+  }
+
+  .readable h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .readable p,
+  .readable li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .readable figure,
+  .readable img {
+    max-width: 100%;
+  }
+
+  .readable figure img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 14px;
+  }
+
+  .readable table,
+  .article-table {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  /* About, proof and application blocks */
+  .home-about-shell,
+  .home-about-primary,
+  .home-about-visual,
+  .home-applications-heading,
+  .home-testimonials-heading,
+  .real-factory-heading,
+  .buyers-proof-heading,
+  .quality-compliance-panel,
+  .about-hero-grid,
+  .about-story-grid,
+  .about-scope-grid,
+  .about-factory-teaser-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .home-about,
+  .home-applications,
+  .home-testimonials,
+  .real-factory-proof,
+  .factory-photo-section,
+  .buyers-proof,
+  .quality-compliance {
+    padding: var(--mobile-section-space) 0;
+  }
+
+  .home-about-shell,
+  .quality-compliance-panel {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .home-about-photo,
+  .about-hero-visual img,
+  .about-story img,
+  .home-applications img,
+  .real-factory-card img,
+  .factory-photo-card img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .home-about-actions,
+  .about-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .home-about-actions .btn,
+  .about-actions .btn {
+    width: 100%;
+  }
+
+  .home-about-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .home-about-float-card,
+  .about-visual-badge {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .application-card {
+    border-radius: var(--mobile-radius);
+  }
+
+  .quality-compliance-panel {
+    gap: 24px;
+  }
+
+  .quality-compliance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-item {
+    min-height: 82px;
+  }
+
+  /* Contact form: linear checkout-like flow */
+  .contact-layout,
+  .form-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px;
+  }
+
+  .contact-box {
+    padding: 22px 18px;
+    text-align: left;
+  }
+
+  .form {
+    padding: 22px 18px;
+    gap: 16px;
+    border-radius: 18px;
+  }
+
+  .form-heading h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .form label {
+    font-size: 14px;
+  }
+
+  .form input,
+  .form select,
+  .form textarea {
+    min-height: 50px;
+    padding: 13px 14px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .form textarea {
+    min-height: 160px;
+  }
+
+  .form button[type="submit"] {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  /* Footer and conversion controls */
+  .cta {
+    padding: 28px 0;
+  }
+
+  .cta .container {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .cta .btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 48px 0 22px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px 20px;
+  }
+
+  .footer h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .footer a {
+    min-height: 36px;
+    margin: 2px 0;
+    font-size: 14px;
+  }
+
+  .copy {
+    margin-top: 28px;
+    font-size: 12px;
+  }
+
+  .whatsapp-float {
+    left: 14px !important;
+    bottom: 14px !important;
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .whatsapp-float img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .quote-float {
+    right: 14px !important;
+    bottom: 14px !important;
+    width: auto !important;
+    max-width: calc(100vw - 96px);
+    min-height: 50px;
+    border-radius: 25px !important;
+  }
+
+  .quote-float img {
+    width: auto !important;
+    max-width: 100%;
+    height: 50px !important;
+    object-fit: contain;
+  }
+
+  .back-to-top {
+    right: 14px !important;
+    bottom: 78px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --mobile-gutter: 16px;
+  }
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9.2vw, 38px);
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-metrics,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .news-card {
+    grid-template-columns: 1fr;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-toggle,
+  .btn,
+  .product-card,
+  .news-card {
+    transition: none !important;
+  }
+}
