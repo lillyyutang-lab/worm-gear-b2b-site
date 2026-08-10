@@ -5,7 +5,11 @@ window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
 window.gtag('js',new Date());
 window.gtag('config',gaMeasurementId);
 
-if(!document.querySelector('script[data-smk-ga4]')){
+let gaScriptRequested=false;
+
+function loadGoogleAnalytics(){
+  if(gaScriptRequested||document.querySelector('script[data-smk-ga4]')) return;
+  gaScriptRequested=true;
   const gaScript=document.createElement('script');
   gaScript.async=true;
   gaScript.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(gaMeasurementId);
@@ -13,7 +17,20 @@ if(!document.querySelector('script[data-smk-ga4]')){
   document.head.appendChild(gaScript);
 }
 
+function scheduleGoogleAnalytics(){
+  if('requestIdleCallback' in window){
+    window.requestIdleCallback(loadGoogleAnalytics,{timeout:3000});
+  }else{
+    window.setTimeout(loadGoogleAnalytics,1500);
+  }
+}
+
+window.addEventListener('load',scheduleGoogleAnalytics,{once:true});
+window.addEventListener('pointerdown',loadGoogleAnalytics,{once:true,passive:true});
+window.addEventListener('keydown',loadGoogleAnalytics,{once:true});
+
 function trackAnalyticsEvent(eventName,eventParameters){
+  loadGoogleAnalytics();
   window.gtag('event',eventName,eventParameters||{});
 }
 
@@ -104,3 +121,31 @@ updateBackToTop();
 backToTop.addEventListener('click',()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
+
+
+function loadDeferredHeroVideo(){
+  const video=document.querySelector('.hero-video');
+  const source=video&&video.querySelector('source[data-src]');
+  if(!video||!source||!window.matchMedia('(min-width: 769px)').matches) return;
+
+  const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  const effectiveType=connection&&connection.effectiveType||'';
+  if(connection&&connection.saveData) return;
+  if(effectiveType==='slow-2g'||effectiveType==='2g') return;
+
+  source.src=source.dataset.src;
+  source.removeAttribute('data-src');
+  video.load();
+  const playPromise=video.play();
+  if(playPromise&&typeof playPromise.catch==='function'){
+    playPromise.catch(()=>{});
+  }
+}
+
+window.addEventListener('load',()=>{
+  if('requestIdleCallback' in window){
+    window.requestIdleCallback(loadDeferredHeroVideo,{timeout:4000});
+  }else{
+    window.setTimeout(loadDeferredHeroVideo,2000);
+  }
+},{once:true});
