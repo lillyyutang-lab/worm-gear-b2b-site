@@ -32,3 +32,12 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - Gearbox knowledge center: https://www.smktrans.com/news.html
 - Contact: https://www.smktrans.com/contact.html
 - Sitemap: https://www.smktrans.com/sitemap.xml
+
+
+## Technical selection guides
+
+- How to select a three-phase electric motor: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
+- Worm gear motor selection guide: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
+- Worm gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
+
+These engineering guides cover product definitions, selection formulas, application data, duty, mounting, safety limitations and frequently asked questions for industrial buyers.
