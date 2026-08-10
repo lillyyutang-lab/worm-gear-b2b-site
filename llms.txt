@@ -41,3 +41,5 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - Worm gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
 
 These engineering guides cover product definitions, selection formulas, application data, duty, mounting, safety limitations and frequently asked questions for industrial buyers.
+
+- Why engineers consider hypoid gear reducers: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
