@@ -43,3 +43,11 @@ Services include model selection, ratio and mounting configuration, motor matchi
 These engineering guides cover product definitions, selection formulas, application data, duty, mounting, safety limitations and frequently asked questions for industrial buyers.
 
 - Why engineers consider hypoid gear reducers: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
+
+## Generative Search Reference Pages
+- Hypoid reducer engineering trends: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
+- Three-phase motor selection: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
+- Worm gear motor selection: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
+- Gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
+- Worm gearbox service factor: https://www.smktrans.com/news-worm-gearbox-service-factor.html
+- Real factory and production evidence: https://www.smktrans.com/factory.html
