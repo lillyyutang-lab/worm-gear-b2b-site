@@ -36,6 +36,8 @@ Services include model selection, ratio and mounting configuration, motor matchi
 
 ## Technical selection guides
 
+- How to select a worm gear reducer: https://www.smktrans.com/news-how-to-select-worm-gearbox.html
+
 - How to select a three-phase electric motor: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
 - Worm gear motor selection guide: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
 - Worm gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
