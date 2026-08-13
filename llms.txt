@@ -47,6 +47,8 @@ These engineering guides cover product definitions, selection formulas, applicat
 
 - Why engineers consider hypoid gear reducers: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
 
+- Conveyor gearmotor selection guide: https://www.smktrans.com/news-how-to-select-conveyor-gearmotor.html
+
 ## Generative Search Reference Pages
 - Hypoid reducer engineering trends: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
 - Three-phase motor selection: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
