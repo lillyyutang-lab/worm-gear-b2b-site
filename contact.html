@@ -71,10 +71,12 @@ document.getElementById('contact-form').addEventListener('submit',async function
       trackAnalyticsEvent('generate_lead',{
         form_name:'contact_inquiry',
         product:data.product||'',
-        product_model:data.productModel||data.product_model||'',
+        product_model:data.model||data.productModel||data.product_model||'',
         ratio:data.ratio||'',
         motor_power:data.motorPower||data.motor_power||'',
-        quantity:data.quantity||''
+        quantity:data.quantity||'',
+        method:'email_form',
+        page_path:window.location.pathname
       });
     }
     form.reset();
@@ -91,3 +93,4 @@ document.getElementById('contact-form').addEventListener('submit',async function
 </script>
 </body>
 </html>
+
