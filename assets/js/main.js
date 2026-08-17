@@ -17,22 +17,18 @@ function loadGoogleAnalytics(){
   document.head.appendChild(gaScript);
 }
 
-function scheduleGoogleAnalytics(){
-  if('requestIdleCallback' in window){
-    window.requestIdleCallback(loadGoogleAnalytics,{timeout:3000});
-  }else{
-    window.setTimeout(loadGoogleAnalytics,1500);
-  }
-}
-
-window.addEventListener('load',scheduleGoogleAnalytics,{once:true});
-window.addEventListener('pointerdown',loadGoogleAnalytics,{once:true,passive:true});
-window.addEventListener('keydown',loadGoogleAnalytics,{once:true});
+// Load immediately so outbound clicks are not lost when the browser leaves the page.
+// The library remains asynchronous and does not block page rendering.
+loadGoogleAnalytics();
 
 function trackAnalyticsEvent(eventName,eventParameters){
   loadGoogleAnalytics();
-  window.gtag('event',eventName,eventParameters||{});
+  window.gtag('event',eventName,Object.assign({
+    transport_type:'beacon'
+  },eventParameters||{}));
 }
+
+window.trackAnalyticsEvent=trackAnalyticsEvent;
 
 document.addEventListener('click',(event)=>{
   const link=event.target.closest('a');
@@ -42,13 +38,25 @@ document.addEventListener('click',(event)=>{
   const label=(link.textContent||link.getAttribute('aria-label')||'').trim().replace(/\s+/g,' ').slice(0,100);
   const pagePath=window.location.pathname;
 
-  if(link.classList.contains('quote-float')||/get a (free )?quote|request a quote|request selection support/i.test(label)){
+  const isQuoteLink=link.classList.contains('quote-float')||/get a (free )?quote|request a quote|request selection support|send (motor )?requirements/i.test(label);
+  const isWhatsAppLink=href.includes('wa.me/')||link.classList.contains('whatsapp-link')||link.classList.contains('whatsapp-float');
+
+  if(isQuoteLink){
     trackAnalyticsEvent('quote_click',{link_text:label,page_path:pagePath,destination:href});
+  }
+
+  if(isWhatsAppLink){
+    trackAnalyticsEvent('whatsapp_click',{link_text:label,page_path:pagePath,destination:href});
     return;
   }
 
-  if(href.includes('wa.me/')||link.classList.contains('whatsapp-link')||link.classList.contains('whatsapp-float')){
-    trackAnalyticsEvent('whatsapp_click',{link_text:label,page_path:pagePath});
+  if(/^mailto:/i.test(href)){
+    trackAnalyticsEvent('email_click',{link_text:label,page_path:pagePath,destination:href.split('?')[0]});
+    return;
+  }
+
+  if(/linkedin\.com/i.test(href)){
+    trackAnalyticsEvent('linkedin_click',{link_text:label,page_path:pagePath,destination:href});
     return;
   }
 
@@ -60,6 +68,35 @@ document.addEventListener('click',(event)=>{
   if(/(?:^|\/)product-[^/?#]+\.html(?:$|[?#])/i.test(href)){
     trackAnalyticsEvent('product_detail_click',{product_page:href.split(/[?#]/)[0],link_text:label,page_path:pagePath});
   }
+});
+
+// Record product detail views using GA4's recommended ecommerce event.
+const productPageMatch=window.location.pathname.match(/\/product-([^/]+)\.html$/i);
+if(productPageMatch){
+  const productHeading=document.querySelector('main h1, main h2, .product-hero h1, .product-hero h2');
+  const productName=(productHeading&&productHeading.textContent||document.title).trim().replace(/\s+/g,' ').slice(0,150);
+  trackAnalyticsEvent('view_item',{
+    page_path:window.location.pathname,
+    items:[{
+      item_id:productPageMatch[1],
+      item_name:productName,
+      item_brand:'SMK Transmission',
+      item_category:'Industrial Power Transmission'
+    }]
+  });
+}
+
+// Measure genuine form engagement once, without treating an attempted submit as a lead.
+document.querySelectorAll('form').forEach((form)=>{
+  form.addEventListener('focusin',()=>{
+    if(form.dataset.gaFormStarted==='true') return;
+    form.dataset.gaFormStarted='true';
+    trackAnalyticsEvent('inquiry_form_start',{
+      form_id:form.id||'',
+      form_name:form.getAttribute('name')||form.id||'website_form',
+      page_path:window.location.pathname
+    });
+  },{once:true});
 });
 
 const toggle=document.querySelector('.mobile-toggle');
@@ -75,7 +112,7 @@ document.querySelectorAll('.menu a[href$=".pdf"]').forEach((link)=>{
 });
 
 const whatsappNumber='8615262579178';
-const whatsappGreeting="Hello SMK, I’m interested in your gearboxes and electric motors. Could you please recommend a suitable model and provide a quotation? Let’s discuss my requirements.";
+const whatsappGreeting="Hello SMK, I鈥檓 interested in your gearboxes and electric motors. Could you please recommend a suitable model and provide a quotation? Let鈥檚 discuss my requirements.";
 const whatsappIcon='<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.42 3 4.03 8.35 4.03 14.93c0 2.31.67 4.56 1.94 6.49L4 29l7.79-2.04a12.04 12.04 0 0 0 5.76 1.47h.01c6.62 0 12.01-5.35 12.01-11.93A11.86 11.86 0 0 0 16.04 3Zm0 2.02c5.5 0 9.98 4.45 9.98 9.91 0 5.47-4.48 9.92-9.98 9.92-1.86 0-3.67-.51-5.24-1.48l-.38-.23-4.62 1.21 1.23-4.48-.25-.4a9.82 9.82 0 0 1-1.52-5.23c0-5.47 4.48-9.92 9.98-9.92Zm-5.01 4.44c-.25 0-.65.1-.99.47-.34.37-1.3 1.27-1.3 3.09s1.33 3.58 1.52 3.83c.19.25 2.61 3.98 6.32 5.58.88.38 1.57.61 2.11.78.89.28 1.69.24 2.33.15.71-.11 2.18-.89 2.49-1.75.31-.86.31-1.6.22-1.75-.09-.16-.34-.25-.71-.44-.37-.19-2.18-1.08-2.52-1.2-.34-.12-.59-.19-.84.19-.25.37-.96 1.2-1.18 1.45-.22.25-.43.28-.81.09-.37-.19-1.57-.58-2.99-1.84-1.11-.98-1.85-2.2-2.07-2.57-.22-.37-.02-.57.16-.76.17-.17.37-.44.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.84-2.01-1.15-2.75-.3-.73-.61-.63-.84-.64h-.72Z"/></svg>';
 const quoteIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5 12 4h6.5a1.5 1.5 0 0 1 1.5 1.5V12l-8.5 8.5-8-8Z"/><circle cx="16.2" cy="7.8" r="1.25"/></svg>';
 
@@ -149,3 +186,4 @@ window.addEventListener('load',()=>{
     window.setTimeout(loadDeferredHeroVideo,2000);
   }
 },{once:true});
+
