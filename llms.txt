@@ -58,3 +58,5 @@ These engineering guides cover product definitions, selection formulas, applicat
 - Gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
 - Worm gearbox service factor: https://www.smktrans.com/news-worm-gearbox-service-factor.html
 - Real factory and production evidence: https://www.smktrans.com/factory.html
+- Three-phase motor overheating troubleshooting: https://www.smktrans.com/news-three-phase-motor-overheating-troubleshooting.html
+- Worm gearbox efficiency and temperature guide: https://www.smktrans.com/news-worm-gearbox-efficiency-temperature-guide.html
