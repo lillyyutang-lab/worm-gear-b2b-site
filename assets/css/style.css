@@ -172,6 +172,25 @@ img {
   z-index: 1;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.hero-video.is-ready { opacity: 1; }
+
+.hero-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+.hero-poster img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-overlay {
@@ -1000,7 +1019,7 @@ details p { margin: 10px 0 0; }
 .about-applications-panel h2 { color:#fff; }
 .about-applications-panel > p:last-child { margin-top:28px; color:#cfe2f7; line-height:1.75; }
 .about-check-list { display:grid; gap:13px; padding:0; margin:27px 0; list-style:none; color:#43536d; }
-.about-check-list li::before { content:"鉁?; display:inline-grid; place-items:center; width:21px; height:21px; margin-right:10px; border-radius:50%; color:#fff; background:#0870d8; font-size:12px; font-weight:900; }
+.about-check-list li::before { content:"✓"; display:inline-grid; place-items:center; width:21px; height:21px; margin-right:10px; border-radius:50%; color:#fff; background:#0870d8; font-size:12px; font-weight:900; }
 .about-inline-link { color:#0059bb; font-weight:900; }
 .about-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
 .about-tags span { padding:9px 13px; border:1px solid rgba(255,255,255,.22); border-radius:999px; color:#e8f4ff; background:rgba(255,255,255,.08); font-size:13px; font-weight:700; }
@@ -1354,7 +1373,7 @@ details p { margin: 10px 0 0; }
   .home-testimonial-card { padding: 26px 23px; }
 }
 
-/* Real factory evidence 鈥?optimized WebP gallery */
+/* Real factory evidence — optimized WebP gallery */
 .real-factory-proof{padding:88px 0 94px;background:#f5f9ff}.real-factory-heading{display:grid;grid-template-columns:1fr .82fr;align-items:end;gap:60px;margin-bottom:32px}.real-factory-kicker{margin:0 0 9px;color:#0870d8;font-size:12px;font-weight:900;letter-spacing:2px}.real-factory-heading h2{margin:0;color:#073f8f;font-size:38px;line-height:1.15;text-transform:uppercase}.real-factory-heading>div:last-child p{margin:0 0 12px;color:#60708a;line-height:1.7}.real-factory-heading a{color:#0059b7;font-size:14px;font-weight:900}.real-factory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.real-factory-card{overflow:hidden;border:1px solid #d7e5f4;border-radius:15px;background:#fff;box-shadow:0 12px 30px rgba(4,45,100,.09)}.real-factory-card img{width:100%;height:245px;display:block;object-fit:cover}.real-factory-card figcaption{padding:20px 21px 22px}.real-factory-card strong{display:block;margin-bottom:7px;color:#10264d;font-size:18px}.real-factory-card span{color:#60708a;font-size:14px;line-height:1.6}.factory-photo-section{padding:88px 0 96px;background:#f5f9ff}.factory-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.factory-photo-card{overflow:hidden;border:1px solid #d7e5f4;border-radius:15px;background:#fff;box-shadow:0 12px 32px rgba(4,45,100,.09)}.factory-photo-card img{width:100%;height:255px;display:block;object-fit:cover}.factory-photo-card figcaption{padding:20px 21px 23px}.factory-photo-card strong{display:block;margin-bottom:7px;color:#10264d;font-size:18px}.factory-photo-card span{color:#60708a;font-size:14px;line-height:1.65}.product-factory-evidence{margin:42px 0;padding:30px;border:1px solid #d7e5f4;border-radius:15px;background:#f7faff}.product-factory-evidence h2{margin-top:0}.product-factory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 16px}.product-factory-grid figure{margin:0;overflow:hidden;border-radius:11px;background:#fff;box-shadow:0 8px 22px rgba(4,45,100,.09)}.product-factory-grid img{width:100%;height:170px;display:block;object-fit:cover}.product-factory-grid figcaption{padding:12px 14px;color:#405570;font-size:13px;font-weight:700}@media(max-width:900px){.real-factory-heading{grid-template-columns:1fr;gap:16px}.real-factory-grid,.factory-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.real-factory-proof,.factory-photo-section{padding:60px 0 66px}.real-factory-heading h2{font-size:30px}.real-factory-grid,.factory-photo-grid,.product-factory-grid{grid-template-columns:1fr}.real-factory-card img,.factory-photo-card img{height:225px}.product-factory-evidence{padding:22px 18px}.product-factory-grid img{height:205px}}
 
 /* Homepage quality and compliance */
@@ -1375,8 +1394,8 @@ details p { margin: 10px 0 0; }
 
 
 /* =====================================================================
-   Mobile commerce visual system 鈥?2026-08-10
-   A single final override for consistent 320鈥?00px presentation.
+   Mobile commerce visual system — 2026-08-10
+   A single final override for consistent 320–700px presentation.
    Desktop styles remain unchanged.
    ===================================================================== */
 @media (max-width: 700px) {
@@ -1494,6 +1513,8 @@ details p { margin: 10px 0 0; }
     object-fit: cover;
     object-position: 62% center;
   }
+
+  .hero-poster img { object-position: 62% center; }
 
   .hero-overlay {
     background:
@@ -2022,4 +2043,3 @@ details p { margin: 10px 0 0; }
   color: #073f8f;
   background: #eef5ff;
 }
-
