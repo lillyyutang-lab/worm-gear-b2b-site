@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOL vs Star-Delta vs VFD: Three-Phase Motor Starting Guide</title>
+  <meta name="description" content="Compare DOL, star-delta and VFD starting for three-phase motors, including current, torque, wiring requirements, an example and a practical selection checklist.">
+  <link rel="canonical" href="https://www.smktrans.com/news-three-phase-motor-starting-methods.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta property="og:title" content="DOL vs Star-Delta vs VFD: Three-Phase Motor Starting Guide">
+  <meta property="og:description" content="Choose a three-phase motor starting method from load torque, permissible current, acceleration time and speed-control requirements.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.smktrans.com/news-three-phase-motor-starting-methods.html">
+  <meta property="og:image" content="https://www.smktrans.com/assets/images/electric-motor.webp">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"DOL vs Star-Delta vs VFD: How to Start a Three-Phase Motor",
+        "description":"An engineering comparison of direct-on-line, star-delta and variable-frequency-drive starting for three-phase motors.",
+        "datePublished":"2026-08-19",
+        "dateModified":"2026-08-19",
+        "author":{"@type":"Organization","name":"SMK Transmission"},
+        "publisher":{"@type":"Organization","name":"SMK Transmission","url":"https://www.smktrans.com/"},
+        "mainEntityOfPage":"https://www.smktrans.com/news-three-phase-motor-starting-methods.html",
+        "image":"https://www.smktrans.com/assets/images/electric-motor.webp"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Which three-phase motor starter is simplest?","acceptedAnswer":{"@type":"Answer","text":"Direct-on-line starting is usually the simplest, but the motor, supply and driven machine must tolerate its starting current and torque."}},
+          {"@type":"Question","name":"How much does star-delta starting reduce current?","acceptedAnswer":{"@type":"Answer","text":"For a suitable motor connected to the same supply, current drawn from the line during the star stage is approximately one-third of direct-on-line delta starting. Starting torque is also approximately one-third, so the method is unsuitable for loads requiring high breakaway torque."}},
+          {"@type":"Question","name":"Does a VFD replace a gearbox?","acceptedAnswer":{"@type":"Answer","text":"No. A VFD controls motor speed and acceleration, while a gearbox provides mechanical ratio and torque multiplication. Many machines require both."}},
+          {"@type":"Question","name":"Can every three-phase motor use star-delta starting?","acceptedAnswer":{"@type":"Answer","text":"No. The motor must have six accessible winding terminals and be rated to run in delta at the available line voltage. The driven load must also accelerate with the reduced starting torque."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="topbar"><div class="container nav"><a class="brand" href="index.html"><img src="assets/images/logo.webp" alt="SMK Transmission" width="87" height="50" loading="eager"></a><button class="mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button><nav class="menu"><a href="index.html">HOME</a><a href="products.html">PRODUCTS</a><a href="index.html#applications">APPLICATIONS</a><a href="about.html">ABOUT US</a><a class="active" href="news.html">BLOG</a><a href="contact.html">CONTACT US</a></nav><a class="quote-btn" href="contact.html">GET A QUOTE</a></div></header>
+<section class="page-hero"><div class="container"><p class="eyebrow">THREE-PHASE MOTOR ENGINEERING GUIDE</p><h1>DOL vs Star-Delta vs VFD: How Should a Three-Phase Motor Start?</h1><p>Compare starting current, available torque, acceleration and control before choosing a starter.</p></div></section>
+<main><section class="section"><article class="container readable">
+  <p><small>Published August 19, 2026 &middot; Reviewed by SMK Transmission</small></p>
+  <div class="answer-box"><strong>Quick answer:</strong> Use direct-on-line (DOL) starting when the supply and machine can accept high starting current and full starting torque. Use star-delta when reduced line current is required and the load can accelerate with roughly one-third of DOL starting torque. Use a VFD when controlled acceleration, adjustable speed or reduced mechanical shock is important. Final selection must follow the motor nameplate, supply limits, load torque curve and local electrical requirements.</div>
+  <img src="assets/images/electric-motor.webp" alt="SMK three-phase electric motor for industrial gearbox and machine applications" width="700" height="700" loading="eager" class="wide-image">
+
+  <h2>What Changes During Motor Starting?</h2>
+  <p>A stopped induction motor has no back electromotive force, so it can draw substantially more current than at rated speed. The starter must accelerate the motor and driven load without excessive voltage drop, thermal stress or mechanical shock. Motor power alone is therefore not enough to choose a starting method.</p>
+
+  <div class="table-wrap"><table><thead><tr><th>Method</th><th>Starting current</th><th>Starting torque</th><th>Best fit</th></tr></thead><tbody>
+    <tr><td>DOL</td><td>Highest of the three methods</td><td>Full across-the-line starting torque</td><td>Small or moderate motors where the supply and machine permit it</td></tr>
+    <tr><td>Star-delta</td><td>About one-third of DOL delta line current during star stage</td><td>About one-third of DOL starting torque</td><td>Low-load starts with a suitable six-terminal motor</td></tr>
+    <tr><td>VFD</td><td>Controlled by drive settings and load</td><td>Controlled acceleration; low-speed torque depends on system design</td><td>Variable speed, soft acceleration and process control</td></tr>
+  </tbody></table></div>
+
+  <h2>1. Direct-on-Line Starting</h2>
+  <p>DOL connects the motor directly to the supply through correctly selected switching and protection equipment. It is simple and provides strong starting torque, but it also produces the greatest current step and mechanical impact. Check the permitted voltage drop, upstream supply capacity, coupling, gearbox and driven machine before using DOL.</p>
+
+  <h2>2. Star-Delta Starting</h2>
+  <p>Star-delta starting first connects the windings in star and then changes to delta for normal running. The motor must have six accessible terminals and must be rated to operate in delta at the line voltage. Because both current and torque fall during the star stage, this method works best when the machine begins with little load. A poorly timed transition can produce current and torque transients.</p>
+
+  <h2>3. Variable Frequency Drive Starting</h2>
+  <p>A VFD changes frequency and voltage to ramp the motor from standstill. It can reduce abrupt acceleration, provide adjustable speed and support process control. Selection must include motor current, overload requirement, minimum operating speed, cooling, cable length, electromagnetic compatibility and braking needs. A VFD does not automatically remove the need for a gearbox.</p>
+
+  <h2>Illustrative Current Comparison</h2>
+  <p>Assume a motor has a nameplate rated current of 15 A and its supplier indicates a DOL starting-current multiple of 6. The approximate DOL current would be:</p>
+  <p><strong>15 A &times; 6 = 90 A</strong></p>
+  <p>For a suitable star-delta application, the supply-line current during the star stage would be approximately one-third of DOL delta starting current:</p>
+  <p><strong>90 A &divide; 3 = approximately 30 A</strong></p>
+  <p>This is an illustration, not a universal motor rating. Use the actual motor data sheet and load-acceleration calculation. The lower star-stage torque can prevent acceleration even when the current reduction looks attractive.</p>
+
+  <h2>Five Selection Steps</h2>
+  <ol>
+    <li><strong>Record motor data:</strong> rated power, voltage, frequency, current, speed, connection and starting limits.</li>
+    <li><strong>Define the load:</strong> breakaway torque, load inertia, acceleration time, starts per hour and duty cycle.</li>
+    <li><strong>Check the supply:</strong> permitted starting current, voltage drop and protective-device coordination.</li>
+    <li><strong>Check the transmission:</strong> gearbox ratio, coupling, belt or chain loads and allowable mechanical shock.</li>
+    <li><strong>Verify the environment:</strong> enclosure, ambient temperature, dust, moisture, altitude and applicable electrical rules.</li>
+  </ol>
+
+  <div class="answer-box"><strong>Information for selection support:</strong> Send the motor power and nameplate, line voltage and frequency, driven machine, starting load, required acceleration time, starts per hour, speed-control range and gearbox ratio.</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>Which three-phase motor starter is simplest?</summary><p>DOL is usually the simplest, but only when the supply and driven machine can tolerate its current and torque step.</p></details>
+  <details><summary>Can every motor use star-delta starting?</summary><p>No. The winding voltage, six-terminal arrangement and load torque must all be suitable.</p></details>
+  <details><summary>Is a soft starter the same as a VFD?</summary><p>No. A soft starter primarily limits voltage during starting and stopping, while a VFD controls frequency and can provide continuous speed control.</p></details>
+  <details><summary>Does a VFD eliminate a gearbox?</summary><p>No. The VFD controls speed; the gearbox supplies mechanical reduction and torque multiplication. The required operating envelope determines whether both are needed.</p></details>
+
+  <h2>Related Engineering Resources</h2>
+  <ul>
+    <li><a href="product-electric-motor.html">Three-phase electric motor product information</a></li>
+    <li><a href="product-gear-motor.html">Industrial gear motor options</a></li>
+    <li><a href="news-how-to-select-three-phase-electric-motor.html">How to select a three-phase motor</a></li>
+    <li><a href="news-vfd-vs-gearbox-three-phase-motor.html">VFD vs gearbox for a three-phase motor</a></li>
+  </ul>
+</article></section></main>
+<section class="cta"><div class="container"><h2>Need a Motor and Gearbox Recommendation?</h2><p>Send your supply, speed, torque, starting duty and mounting requirements to SMK.</p><a class="btn outline" href="contact.html">SEND APPLICATION DATA</a></div></section>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

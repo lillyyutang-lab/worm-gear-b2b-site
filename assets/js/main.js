@@ -17,19 +17,9 @@ function loadGoogleAnalytics(){
   document.head.appendChild(gaScript);
 }
 
-// Keep third-party analytics out of the critical rendering path. The first genuine
-// interaction still starts GA immediately, while passive visits load it when idle.
-const requestAnalyticsOnInteraction=()=>loadGoogleAnalytics();
-['pointerdown','keydown','touchstart'].forEach((eventName)=>{
-  window.addEventListener(eventName,requestAnalyticsOnInteraction,{once:true,passive:true});
-});
-window.addEventListener('load',()=>{
-  if('requestIdleCallback' in window){
-    window.requestIdleCallback(loadGoogleAnalytics,{timeout:3500});
-  }else{
-    window.setTimeout(loadGoogleAnalytics,2500);
-  }
-},{once:true});
+// Load immediately so outbound clicks are not lost when the browser leaves the page.
+// The library remains asynchronous and does not block page rendering.
+loadGoogleAnalytics();
 
 function trackAnalyticsEvent(eventName,eventParameters){
   loadGoogleAnalytics();
@@ -160,13 +150,8 @@ backToTop.setAttribute('title','Back to top');
 backToTop.innerHTML='<span aria-hidden="true">&#8593;</span>';
 document.body.appendChild(backToTop);
 
-let backToTopFrame=0;
 const updateBackToTop=()=>{
-  if(backToTopFrame) return;
-  backToTopFrame=window.requestAnimationFrame(()=>{
-    backToTop.classList.toggle('is-visible',window.scrollY>400);
-    backToTopFrame=0;
-  });
+  backToTop.classList.toggle('is-visible',window.scrollY>400);
 };
 window.addEventListener('scroll',updateBackToTop,{passive:true});
 updateBackToTop();
@@ -187,7 +172,6 @@ function loadDeferredHeroVideo(){
 
   source.src=source.dataset.src;
   source.removeAttribute('data-src');
-  video.addEventListener('canplay',()=>video.classList.add('is-ready'),{once:true});
   video.load();
   const playPromise=video.play();
   if(playPromise&&typeof playPromise.catch==='function'){
@@ -202,4 +186,3 @@ window.addEventListener('load',()=>{
     window.setTimeout(loadDeferredHeroVideo,2000);
   }
 },{once:true});
-
