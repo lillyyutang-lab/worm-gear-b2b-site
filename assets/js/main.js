@@ -163,12 +163,30 @@ backToTop.addEventListener('click',()=>{
 function loadDeferredHeroVideo(){
   const video=document.querySelector('.hero-video');
   const source=video&&video.querySelector('source[data-src]');
-  if(!video||!source||!window.matchMedia('(min-width: 769px)').matches) return;
+  if(!video||!source) return;
 
   const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
   const effectiveType=connection&&connection.effectiveType||'';
   if(connection&&connection.saveData) return;
   if(effectiveType==='slow-2g'||effectiveType==='2g') return;
+
+  const startTime=Number(video.dataset.start)||0;
+  const endTime=Number(video.dataset.end)||0;
+  const restartHighlight=()=>{
+    if(Number.isFinite(video.duration)&&startTime<video.duration){
+      video.currentTime=startTime;
+    }
+  };
+
+  video.addEventListener('loadedmetadata',restartHighlight,{once:true});
+  video.addEventListener('timeupdate',()=>{
+    if(endTime>startTime&&video.currentTime>=endTime){
+      restartHighlight();
+      const replay=video.play();
+      if(replay&&typeof replay.catch==='function') replay.catch(()=>{});
+    }
+  });
+  video.addEventListener('canplay',()=>video.classList.add('is-ready'),{once:true});
 
   source.src=source.dataset.src;
   source.removeAttribute('data-src');
