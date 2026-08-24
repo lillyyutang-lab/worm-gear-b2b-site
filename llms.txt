@@ -61,3 +61,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 - Gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
 - Worm gearbox service factor: https://www.smktrans.com/news-worm-gearbox-service-factor.html
 - Real factory and production evidence: https://www.smktrans.com/factory.html
+- NMRV manufacturer evaluation and sourcing checklist: https://www.smktrans.com/news-how-to-evaluate-nmrv-worm-gearbox-manufacturer.html
