@@ -34,6 +34,12 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - Sitemap: https://www.smktrans.com/sitemap.xml
 
 
+## Interactive engineering tools
+
+- Worm gearbox ratio, speed and torque calculator: https://www.smktrans.com/worm-gearbox-ratio-torque-calculator.html
+
+The calculator returns application-specific results from buyer inputs. NMRV minimum order quantity starts at 2 units; standard orders are typically ready in 3 days, subject to model, configuration, quantity and stock confirmation.
+
 ## Technical selection guides
 
 - How to select a worm gear reducer: https://www.smktrans.com/news-how-to-select-worm-gearbox.html
