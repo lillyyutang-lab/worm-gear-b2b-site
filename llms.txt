@@ -56,6 +56,7 @@ These engineering guides cover product definitions, selection formulas, applicat
 - Conveyor gearmotor selection guide: https://www.smktrans.com/news-how-to-select-conveyor-gearmotor.html
 
 - NMRV worm gearbox sizes RV25-RV150: https://www.smktrans.com/news-nmrv-worm-gearbox-sizes-rv25-rv150.html
+- RV50/NMRV050 ratios, speed examples and selection guide: https://www.smktrans.com/news-rv50-worm-gearbox-specifications-ratios-applications.html
 - Three-phase motor overheating troubleshooting: https://www.smktrans.com/news-three-phase-motor-overheating-troubleshooting.html
 - Worm gearbox efficiency and temperature guide: https://www.smktrans.com/news-worm-gearbox-efficiency-temperature-guide.html
 - Three-phase motor starting methods (DOL vs star-delta vs VFD): https://www.smktrans.com/news-three-phase-motor-starting-methods.html
