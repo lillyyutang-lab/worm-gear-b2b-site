@@ -15,10 +15,24 @@
 .spec-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .spec-actions .btn{min-width:160px;background:#c9430e!important;border-color:#c9430e!important;box-shadow:none}
 .spec-subnav{display:flex;border-bottom:1px solid #d5d5d5;margin:28px 0 22px}
-.spec-subnav span{padding:12px 26px;background:#1484bd;color:#fff;font-weight:700}.spec-subnav span+span{background:#f0efec;color:#333}
+.spec-tab{appearance:none;border:0;background:#f0efec;color:#333;font-weight:700;padding:12px 26px;cursor:pointer;font:inherit}
+.spec-tab.is-active{background:#1484bd;color:#fff}
+.tab-panel[hidden]{display:none!important}
 .spec-copy h3{font-size:20px;margin:18px 0 8px;color:#17213b}.spec-copy p{margin:5px 0;line-height:1.7}.spec-copy ul{margin:6px 0 12px;padding-left:22px}
 .spec-table{width:100%;border-collapse:collapse;font-size:14px}.spec-table th,.spec-table td{border:1px solid #c8c8c8;padding:10px 9px;text-align:left}.spec-table th{background:#f1f1f1;color:#234d73}.spec-table tr:nth-child(even){background:#fafafa}
-@media(max-width:720px){.product-spec-panel{padding:20px 14px}.spec-summary{grid-template-columns:1fr}.spec-summary div{grid-template-columns:1fr 1fr}.spec-subnav span{padding:10px 16px}.spec-table{display:block;overflow-x:auto;white-space:nowrap}.spec-actions .btn{width:100%}}
+.inquiry-card{border:1px solid #d9e2ef;background:#fbfdff;padding:24px;border-radius:12px}
+.inquiry-contact{display:flex;flex-wrap:wrap;gap:12px 28px;padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid #dfe7f2}
+.inquiry-contact a{color:#0a5fb5;font-weight:700}
+.form-heading{margin-bottom:6px}
+.form-heading span{display:inline-block;font-size:12px;letter-spacing:.14em;color:#0a5fb5;font-weight:800}
+.form-heading h3{font-size:32px;line-height:1.15;margin:10px 0 8px;color:#073f8f}
+.form-heading p{margin:0 0 4px;color:#50627a}
+.form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form label{display:block;font-weight:700;color:#17213b}
+.form input,.form textarea,.form select{margin-top:8px}
+.form-honeypot{position:absolute!important;left:-9999px!important;opacity:0!important;pointer-events:none}
+.form-status{min-height:24px;margin:4px 0 0;font-weight:700;color:#234d73}.form-status.success{color:#148a4b}.form-status.error{color:#bf2f2f}
+@media(max-width:720px){.product-spec-panel{padding:20px 14px}.spec-summary{grid-template-columns:1fr}.spec-summary div{grid-template-columns:1fr 1fr}.spec-subnav{overflow:auto}.spec-tab{flex:1 0 auto;padding:10px 16px}.spec-table{display:block;overflow-x:auto;white-space:nowrap}.spec-actions .btn{width:100%}.form-row{grid-template-columns:1fr}.form-heading h3{font-size:28px}.inquiry-card{padding:18px 14px}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"SMK Worm Gear Motor","description":"Integrated worm gearbox and electric motor assemblies for compact right-angle industrial drives.","brand":{"@type":"Brand","name":"SMK Transmission"},"manufacturer":{"@type":"Organization","name":"SMK Transmission","url":"https://www.smktrans.com/"},"category":"Worm Gear Motor","url":"https://www.smktrans.com/product-gear-motor.html","image":"https://www.smktrans.com/assets/images/gear-motor.webp","additionalProperty":[{"@type":"PropertyValue","name":"Configuration","value":"Worm gearbox with AC, DC, single-phase or three-phase motor"},{"@type":"PropertyValue","name":"Selection inputs","value":"Output speed, torque, motor power, ratio, duty and mounting"},{"@type":"PropertyValue","name":"Application support","value":"Model selection, motor and reducer matching, drawings and OEM support"},{"@type":"PropertyValue","name":"RV Series rated power","value":"0.06 kW to 15 kW, subject to model confirmation"},{"@type":"PropertyValue","name":"RV Series rated ratio","value":"Typically 5 to 100, subject to model confirmation"},{"@type":"PropertyValue","name":"Output arrangement","value":"Hollow shaft, hollow shaft with flange or plug-in solid shaft, subject to model"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a worm gear motor?","acceptedAnswer":{"@type":"Answer","text":"A worm gear motor combines an electric motor and worm gearbox to provide reduced output speed, increased torque and a compact right-angle output."}},{"@type":"Question","name":"How do I select a worm gearbox motor?","acceptedAnswer":{"@type":"Answer","text":"Confirm motor input speed, required output speed and torque, ratio, duty, service factor, mounting, shaft arrangement, voltage, frequency and environment."}},{"@type":"Question","name":"Can SMK supply the motor and gearbox separately?","acceptedAnswer":{"@type":"Answer","text":"Yes. SMK can supply separate components or a matched worm gear motor assembly."}},{"@type":"Question","name":"What information should I send for a worm gear motor quotation?","acceptedAnswer":{"@type":"Answer","text":"Send required output speed, continuous and peak torque, motor power, voltage, frequency, duty, mounting position, shaft or bore dimensions, application and quantity."}},{"@type":"Question","name":"Can SMK match a worm gearbox motor to an existing machine?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send the existing nameplate, shaft or flange dimensions, installation photos, target output speed and load data so the motor and reducer interface can be checked together."}}]}]}</script>
 </head>
@@ -35,8 +49,11 @@
       <h2 id="rv-series-specs">RV Series Worm Gear Motors</h2>
       <div class="spec-summary"><div><strong>Rated Power:</strong><span>0.06 kW–15 kW</span></div><div><strong>Rated Torque:</strong><span>1.8–1760 N·m</span></div><div><strong>Rated Ratio:</strong><span>5–100</span></div><div><strong>Gear Arrangement:</strong><span>Worm wheel and worm shaft</span></div><div><strong>Housing:</strong><span>Aluminum alloy or cast iron</span></div><div><strong>Shaft Position:</strong><span>Right angle</span></div></div>
       <div class="spec-actions"><a class="btn" href="mailto:lillyyutang@gmail.com?subject=RV%20Series%20Worm%20Gear%20Motor%20Inquiry">SEND EMAIL</a><a class="btn" href="https://wa.me/8615262579178" target="_blank" rel="noopener noreferrer">CHAT ONLINE</a></div>
-      <div class="spec-subnav"><span>Description</span><span>Inquiry</span></div>
-      <div class="spec-copy">
+      <div class="spec-subnav" role="tablist" aria-label="RV series details">
+        <button class="spec-tab is-active" type="button" role="tab" aria-selected="true" data-tab="description">Description</button>
+        <button class="spec-tab" type="button" role="tab" aria-selected="false" data-tab="inquiry">Inquiry</button>
+      </div>
+      <div class="tab-panel spec-copy" data-panel="description">
         <h3>Components</h3>
         <p><strong>1. Housing:</strong> Die-cast aluminum alloy gearbox for RV025–RV090; cast iron gearbox for RV110–RV150.</p>
         <p><strong>2. Worm wheel:</strong> Wearable tin (stannum) bronze alloy or aluminum bronze alloy, subject to model.</p>
@@ -65,6 +82,25 @@
         <p><strong>Cooling:</strong> natural cooling.</p>
         <p><small>Model ranges, dimensions, materials and power limits are subject to the selected configuration and final technical confirmation.</small></p>
       </div>
+      <div class="tab-panel" data-panel="inquiry" hidden>
+        <div class="inquiry-card">
+          <div class="inquiry-contact">
+            <a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a>
+            <a href="https://wa.me/8615262579178" target="_blank" rel="noopener noreferrer">+86 152 6257 9178</a>
+          </div>
+          <form class="form inquiry-form" id="gear-motor-inquiry-form">
+            <div class="form-heading"><span>REQUEST A QUOTE</span><h3>Tell Us What You Need</h3><p>Please leave your detailed requirements and contact information. We will reply ASAP.</p></div>
+            <div class="form-row"><label>Name *<input name="name" placeholder="Your name" required></label><label>Email *<input name="email" type="email" placeholder="name@company.com" required></label></div>
+            <div class="form-row"><label>WhatsApp<input name="whatsapp" placeholder="+ country code and number"></label><label>Product<select name="product"><option selected>Gear Motor</option><option>Worm Gear Motor</option><option>Worm Gear Reducer</option><option>Electric Motor</option><option>Hypoid Gear Reducer</option><option>Other</option></select></label></div>
+            <div class="form-row"><label>Product Model<input name="model" maxlength="120" placeholder="e.g. RV050"></label><label>Ratio<input name="ratio" maxlength="60" placeholder="e.g. 30:1"></label></div>
+            <div class="form-row"><label>Motor Power<input name="motorPower" maxlength="60" placeholder="e.g. 0.75 kW"></label><label>Quantity *<input name="quantity" type="number" min="1" step="1" placeholder="e.g. 100" required></label></div>
+            <label>Requirements *<textarea name="message" maxlength="5000" placeholder="Please include input speed, required output speed, torque, mounting position, voltage, frequency and other application details." required></textarea></label>
+            <label class="form-honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+            <button class="btn" type="submit">SEND INQUIRY VIA EMAIL</button>
+            <p class="form-status" id="gear-motor-form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
     </section>
     <h2>Factory Support</h2>
     <p>SMK supports model selection, drawings, OEM orders and export packaging from its Jiangsu production operation. <a href="factory.html">View the factory →</a></p>
@@ -78,4 +114,70 @@
 </main>
 <section class="cta"><div class="container"><h2>Send Your Output Speed and Torque</h2><a class="btn outline" href="contact.html">GET A MATCHED WORM GEAR MOTOR</a></div></section>
 <script src="assets/js/main.js" defer></script>
+<script>
+(function(){
+  const tabButtons=document.querySelectorAll('.spec-tab');
+  const tabPanels=document.querySelectorAll('.tab-panel');
+  function setTab(tabName){
+    tabButtons.forEach(function(button){
+      const isActive=button.dataset.tab===tabName;
+      button.classList.toggle('is-active',isActive);
+      button.setAttribute('aria-selected',isActive?'true':'false');
+      button.tabIndex=isActive?0:-1;
+    });
+    tabPanels.forEach(function(panel){
+      panel.hidden=panel.dataset.panel!==tabName;
+    });
+  }
+  tabButtons.forEach(function(button){
+    button.addEventListener('click',function(){ setTab(button.dataset.tab); });
+  });
+  setTab('description');
+
+  const form=document.getElementById('gear-motor-inquiry-form');
+  if(!form) return;
+  form.addEventListener('submit',async function(event){
+    event.preventDefault();
+    const button=form.querySelector('button[type="submit"]');
+    const status=document.getElementById('gear-motor-form-status');
+    const data=Object.fromEntries(new FormData(form).entries());
+    button.disabled=true;
+    button.textContent='SENDING...';
+    status.className='form-status';
+    status.textContent='Sending your inquiry securely...';
+    try {
+      const response=await fetch('/api/send-inquiry',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      });
+      const result=await response.json().catch(function(){return {};});
+      if(!response.ok) throw new Error(result.error||'Unable to send your inquiry.');
+      if(typeof trackAnalyticsEvent==='function'){
+        trackAnalyticsEvent('generate_lead',{
+          form_name:'gear_motor_inquiry',
+          product:data.product||'',
+          product_model:data.model||'',
+          ratio:data.ratio||'',
+          motor_power:data.motorPower||'',
+          quantity:data.quantity||'',
+          method:'email_form',
+          page_path:window.location.pathname
+        });
+      }
+      form.reset();
+      status.className='form-status success';
+      status.textContent='Thank you! Your inquiry has been sent successfully. We will contact you soon.';
+      setTab('inquiry');
+    } catch(error) {
+      status.className='form-status error';
+      status.textContent=error.message+' You can also email lillyyutang@gmail.com.';
+      setTab('inquiry');
+    } finally {
+      button.disabled=false;
+      button.textContent='SEND INQUIRY VIA EMAIL';
+    }
+  });
+})();
+</script>
 </body></html>
