@@ -2062,3 +2062,14 @@ details p { margin: 10px 0 0; }
 .home-factory-summary{max-width:920px;margin:34px auto 0;color:#50647e;font-size:15px;line-height:1.8;text-align:center}
 @media(max-width:1050px){.home-factory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-factory-grid .real-factory-card,.home-factory-grid .real-factory-card:nth-child(5),.home-factory-grid .real-factory-card:nth-child(6),.home-factory-grid .real-factory-card:nth-child(7){grid-column:auto}.home-factory-showcase .real-factory-heading h2{font-size:40px}}
 @media(max-width:620px){.home-factory-showcase{padding:68px 0 72px}.home-factory-showcase .real-factory-heading{margin-bottom:28px}.home-factory-showcase .real-factory-heading h2{font-size:32px;line-height:1.12}.home-factory-grid{grid-template-columns:1fr;gap:16px}.home-factory-grid .real-factory-card{min-height:0}.home-factory-grid .real-factory-card img{height:230px}.home-factory-grid .real-factory-card:hover{transform:none}.home-factory-summary{text-align:left}}
+
+
+/* Mobile performance: reserve the complete first-screen geometry and avoid continuous contact-button animations. */
+@media (max-width:767px) {
+  .hero { min-height: 600px; }
+  .hero-poster { background: #021437; }
+  .hero-poster img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .hero-video { display: none; }
+  .whatsapp-float,
+  .quote-float { animation: none !important; will-change: auto; }
+}
