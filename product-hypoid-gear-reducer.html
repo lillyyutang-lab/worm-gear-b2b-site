@@ -13,7 +13,7 @@
 .km-summary strong{color:#17213b}.km-summary span{color:#234d73}
 .km-actions{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
 .km-actions .btn{min-width:160px;background:#0753ad!important;border-color:#0753ad!important;box-shadow:none}
-.km-subnav{display:flex;border-bottom:1px solid #d5d5d5;margin:28px 0 22px}.km-tab{min-width:170px;background:#f0efec;color:#333;padding:11px 26px;text-align:center;text-decoration:none;border-right:1px solid #d5d5d5}.km-tab.is-active{background:#1484bd;color:#fff}
+.km-subnav{display:flex;border-bottom:1px solid #d5d5d5;margin:28px 0 22px}.km-tab{min-width:170px;background:#f0efec;color:#333;padding:11px 26px;text-align:center;text-decoration:none;border:0;border-right:1px solid #d5d5d5;cursor:pointer;font:inherit}.km-tab.is-active{background:#1484bd;color:#fff}
 .km-copy h3{font-size:20px;margin:20px 0 8px;color:#17213b}.km-copy p{margin:5px 0;line-height:1.7}.km-copy ul{margin:6px 0 16px;padding-left:22px}
 .km-table-wrap{overflow-x:auto;margin:16px 0}
 .km-table{width:100%;border-collapse:collapse;font-size:14px;min-width:800px}
@@ -49,8 +49,8 @@
 <div><strong>Housing:</strong><span>Aluminium alloy or cast iron</span></div>
 </div>
 <div class="km-actions"><a class="btn" href="mailto:lillyyutang@gmail.com?subject=KM%20Series%20Hypoid%20Gear%20Motor%20Inquiry">SEND EMAIL</a><a class="btn" href="https://wa.me/8615262579178?text=Hello%20SMK%2C%20I%20am%20interested%20in%20your%20KM%20Series%20hypoid%20gear%20motor." target="_blank" rel="noopener noreferrer">CHAT ONLINE</a></div>
-<nav class="km-subnav" aria-label="KM series details"><span class="km-tab is-active">Description</span><a class="km-tab" href="#hypoid-inquiry-title">Inquiry</a></nav>
-<div class="km-copy">
+<div class="km-subnav" role="tablist" aria-label="KM series details"><button class="km-tab is-active" type="button" role="tab" aria-selected="true" data-km-tab="description">Description</button><button class="km-tab" type="button" role="tab" aria-selected="false" data-km-tab="inquiry">Inquiry</button></div>
+<div class="km-copy" data-km-panel="description">
 <h3>Components</h3>
 <p><strong>1. Housing:</strong><br>Aluminium alloy housing for KM050–KM090.<br>Gray cast iron housing for KM110.</p>
 <p><strong>2. Gears:</strong><br>Helical and hypoid bevel gear set manufactured from 20CrMnTi steel, with carburizing and nitriding treatment and approximately 0.3–0.6 mm remaining carburized layer after precision grinding.<br>Gear hardness: 58–62 HRC.</p>
@@ -79,8 +79,7 @@
 <h3>Installation</h3><p>Foot mounted<br>Flange mounted</p>
 <h3>Lubrication</h3><p>Grease lubrication<br>Oil-bath and splash lubrication</p>
 <h3>Cooling</h3><p>Natural cooling</p>
-</div></section>
-<section class="direct-inquiry" aria-labelledby="hypoid-inquiry-title">
+</div><section class="direct-inquiry" data-km-panel="inquiry" aria-labelledby="hypoid-inquiry-title" hidden>
 <div class="direct-inquiry-title" id="hypoid-inquiry-title">» INQUIRY</div>
 <div class="direct-inquiry-body">
 <div class="inquiry-contact"><div class="inquiry-contact-item">✉ <a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a></div><div class="inquiry-contact-item">☎ <a href="tel:+8615262579178">+86 152 6257 9178</a></div></div>
@@ -95,8 +94,11 @@
 <input type="hidden" name="product" value="KM Series Hypoid Gear Reducer">
 <button class="btn" type="submit">SEND MESSAGE</button><p class="form-status" id="hypoid-inquiry-status" role="status" aria-live="polite"></p>
 </form></div></section>
+</section>
+
 </div></section></main>
 <section class="cta"><div class="container"><div><h2>Need a KM model selected?</h2><p>Send motor, speed, torque, duty, mounting and quantity requirements.</p></div><a class="btn outline" href="#hypoid-inquiry-title">REQUEST KM SELECTION</a></div></section>
 <footer class="footer"><div class="container"><div class="footer-grid"><div><h3>SMK Transmission</h3><p>Manufacturer of gear reducers and electric motors since 2010.</p></div><div><h3>Products</h3><a href="product-worm-gear-reducer.html">Worm Gear Reducers</a><a href="product-hypoid-gear-reducer.html">Hypoid Gear Reducers</a></div><div><h3>Knowledge</h3><a href="news-why-engineers-choose-hypoid-gear-reducers.html">Hypoid Engineering Guide</a><a href="news-nmrv-vs-hypoid-gearbox.html">NMRV vs Hypoid</a></div><div><h3>Contact</h3><a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a><a href="https://wa.me/8615262579178">+86 152 6257 9178</a></div></div><div class="copy">&copy; 2026 SMK Transmission.</div></div></footer><script src="assets/js/main.js" defer></script><script>
+(function(){const buttons=document.querySelectorAll('[data-km-tab]'),panels=document.querySelectorAll('[data-km-panel]');function show(name){buttons.forEach(function(b){const active=b.dataset.kmTab===name;b.classList.toggle('is-active',active);b.setAttribute('aria-selected',active?'true':'false')});panels.forEach(function(p){p.hidden=p.dataset.kmPanel!==name})}buttons.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.kmTab)})});show('description')})();
 (function(){const f=document.getElementById('hypoid-inquiry-form');if(!f)return;f.addEventListener('submit',async function(e){e.preventDefault();const b=f.querySelector('button[type="submit"]'),s=document.getElementById('hypoid-inquiry-status'),d=Object.fromEntries(new FormData(f).entries());b.disabled=true;b.textContent='SENDING...';s.className='form-status';s.textContent='Sending your inquiry securely...';try{const r=await fetch('/api/send-inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}),j=await r.json().catch(function(){return{}});if(!r.ok)throw new Error(j.error||'Unable to send your inquiry.');if(typeof trackAnalyticsEvent==='function')trackAnalyticsEvent('generate_lead',{form_name:'hypoid_gear_inquiry',product:'KM Series Hypoid Gear Reducer',product_model:d.model||'',quantity:d.quantity||'',method:'email_form',page_path:window.location.pathname});f.reset();s.className='form-status success';s.textContent='Thank you! Your inquiry has been sent successfully.'}catch(err){s.className='form-status error';s.textContent=err.message+' You can also email lillyyutang@gmail.com.'}finally{b.disabled=false;b.textContent='SEND MESSAGE'}})})();
 </script></body></html>
