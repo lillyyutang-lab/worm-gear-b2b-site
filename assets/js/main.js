@@ -165,6 +165,12 @@ function loadDeferredHeroVideo(){
   const source=video&&video.querySelector('source');
   if(!video||!source) return;
 
+  // Keep the 6 MB background video off small screens and reduced-data/reduced-motion devices.
+  // The static WebP poster remains visible, preserving the hero layout and conversion copy.
+  const smallViewport=window.matchMedia('(max-width: 767px)').matches;
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(smallViewport||reducedMotion) return;
+
   const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
   const effectiveType=connection&&connection.effectiveType||'';
   if(connection&&connection.saveData) return;
