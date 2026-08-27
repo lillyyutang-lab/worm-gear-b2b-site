@@ -101,7 +101,7 @@ document.querySelectorAll('form').forEach((form)=>{
 
 const toggle=document.querySelector('.mobile-toggle');
 const menu=document.querySelector('.menu');
-if(toggle&&menu){toggle.addEventListener('click',()=>menu.classList.toggle('open'));}
+if(toggle&&menu){toggle.addEventListener('click',()=>{const isOpen=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));});}
 
 // Use one consistent red PDF icon for every navigation catalog link.
 const catalogNavIcon='<svg class="catalog-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 7V3.5L18.5 9H13ZM8 13h3a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1v2H8v-5Zm2 1v1h1v-1h-1Zm3-1h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2v-5Zm2 2h-1v1h1v-1Zm2-2h3v1h-1v1h1v1h-1v2h-2v-5Z"/></svg>';
