@@ -30,6 +30,7 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - SMK factory in Jiangsu, China: https://www.smktrans.com/factory.html
 - Product overview: https://www.smktrans.com/products.html
 - Gearbox knowledge center: https://www.smktrans.com/news.html
+- RV63 worm gearbox ratio, torque and motor selection guide: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
 - Contact: https://www.smktrans.com/contact.html
 - Sitemap: https://www.smktrans.com/sitemap.xml
 
