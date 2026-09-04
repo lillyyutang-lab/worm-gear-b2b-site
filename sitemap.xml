@@ -3,11 +3,11 @@
   <url><loc>https://www.smktrans.com/</loc><lastmod>2026-08-06</lastmod><priority>1.0</priority></url>
   <url><loc>https://www.smktrans.com/products.html</loc><lastmod>2026-08-06</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.smktrans.com/about.html</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.smktrans.com/factory.html</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.smktrans.com/factory.html</loc><lastmod>2026-09-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/contact.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/news.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/product-worm-gear-reducer.html</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.smktrans.com/product-hypoid-gear-reducer.html</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.smktrans.com/product-hypoid-gear-reducer.html</loc><lastmod>2026-09-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/product-electric-motor.html</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/product-gear-motor.html</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority><image:image><image:loc>https://www.smktrans.com/assets/images/smk-rv-worm-gear-motor.webp</image:loc></image:image></url>
   <url><loc>https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
@@ -17,8 +17,8 @@
   <url><loc>https://www.smktrans.com/news-inside-smk-factory.html</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.smktrans.com/news-are-worm-gearboxes-self-locking.html</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html</loc><lastmod>2026-08-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.smktrans.com/product-nmrv-udl-three-phase-motor.html</loc><lastmod>2026-08-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.smktrans.com/product-nmrv-pc-three-phase-motor.html</loc><lastmod>2026-08-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.smktrans.com/product-nmrv-udl-three-phase-motor.html</loc><lastmod>2026-09-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.smktrans.com/product-nmrv-pc-three-phase-motor.html</loc><lastmod>2026-09-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/product-drv-three-phase-motor.html</loc><lastmod>2026-08-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/product-small-ac-gear-reduction-motor.html</loc><lastmod>2026-08-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.smktrans.com/news-worm-gearbox-service-factor.html</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
@@ -42,3 +42,4 @@
   <url><loc>https://www.smktrans.com/pt/</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.smktrans.com/fr/</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
 </urlset>
+
