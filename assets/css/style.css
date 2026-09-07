@@ -421,7 +421,12 @@ img {
 .cta-quote { background: #d4af45; color: #172033; }
 .cta-actions a:hover { transform: translateY(-2px); filter: brightness(1.05); }
 
-.article-cta { margin-top: -42px; position: relative; z-index: 1; }
+.article-cta { margin-top: -72px; position: relative; z-index: 1; }
+.article-cta .container { max-width: 930px; padding: 20px 22px; gap: 12px; }
+.article-cta h2 { font-size: 25px; }
+.article-cta p { margin-top: -4px; margin-bottom: 0; font-size: 14px; line-height: 1.45; }
+.article-cta .cta-actions { gap: 10px; }
+.article-cta .cta-actions a { padding: 10px 16px; min-width: 168px; }
 
 .footer {
   background: #061c42;
