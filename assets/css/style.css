@@ -603,6 +603,8 @@ img {
     flex-direction: column;
     text-align: center;
   }
+
+  .cta-actions a { width: 100%; }
 }
 
 @media(max-width:560px) {
@@ -1955,17 +1957,18 @@ details p { margin: 10px 0 0; }
 
   /* Footer and conversion controls */
   .cta {
-    padding: 28px 0;
+    padding: 0 0 28px;
   }
 
   .cta .container {
-    align-items: stretch;
-    text-align: left;
+    align-items: center;
+    padding: 26px 18px;
+    text-align: center;
   }
 
-  .cta .btn {
-    width: 100%;
-  }
+  .cta h2 { font-size: 24px; }
+  .cta-actions { width: 100%; }
+  .cta-actions a { width: 100%; }
 
   .footer {
     padding: 48px 0 22px;
