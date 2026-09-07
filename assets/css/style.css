@@ -421,6 +421,8 @@ img {
 .cta-quote { background: #d4af45; color: #172033; }
 .cta-actions a:hover { transform: translateY(-2px); filter: brightness(1.05); }
 
+.article-cta { margin-top: -42px; position: relative; z-index: 1; }
+
 .footer {
   background: #061c42;
   color: #dbe8ff;
