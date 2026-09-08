@@ -67,7 +67,7 @@
     <section class="product-spec-panel" aria-labelledby="rv-series-specs">
       <h2 id="rv-series-specs">RV Series Worm Gear Motors</h2>
       <div class="spec-summary"><div><strong>Rated Power:</strong><span>0.06 kW–15 kW</span></div><div><strong>Rated Torque:</strong><span>1.8–1760 N·m</span></div><div><strong>Rated Ratio:</strong><span>5–100</span></div><div><strong>Gear Arrangement:</strong><span>Worm wheel and worm shaft</span></div><div><strong>Housing:</strong><span>Aluminum alloy or cast iron</span></div><div><strong>Shaft Position:</strong><span>Right angle</span></div></div>
-      <div class="spec-actions"><a class="btn" href="mailto:lillyyutang@gmail.com?subject=RV%20Series%20Worm%20Gear%20Motor%20Inquiry">SEND EMAIL</a><a class="btn" href="https://wa.me/8615262579178" target="_blank" rel="noopener noreferrer">CHAT ONLINE</a></div>
+      <div class="spec-actions"><a class="btn" href="mailto:info@smktrans.com?subject=RV%20Series%20Worm%20Gear%20Motor%20Inquiry">SEND EMAIL</a><a class="btn" href="https://wa.me/8615262579178" target="_blank" rel="noopener noreferrer">CHAT ONLINE</a></div>
       <div class="spec-subnav" role="tablist" aria-label="RV series details">
         <button class="spec-tab is-active" type="button" role="tab" aria-selected="true" data-tab="description">Description</button>
         <button class="spec-tab" type="button" role="tab" aria-selected="false" data-tab="inquiry">Inquiry</button>
@@ -107,7 +107,7 @@
     <section class="direct-inquiry tab-panel" data-panel="inquiry" aria-labelledby="gear-motor-inquiry-title" hidden>
         <div class="inquiry-card">
           <div class="inquiry-contact" aria-label="Contact information">
-            <div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span><span>Email:</span><a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a></div>
+            <div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span><span>Email:</span><a href="mailto:info@smktrans.com">info@smktrans.com</a></div>
             <div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l2 5-2.2 1.8a15.5 15.5 0 0 0 5.4 5.4L16 13l5 2 .5 2.4a2 2 0 0 1-2.2 2.5C11 19.3 4.7 13 4.4 4.8A2 2 0 0 1 6.6 3.5Z"></path></svg></span><span>Phone:</span><a href="tel:+8615262579178">+86 152 6257 9178</a></div>
           </div>
           <form class="form inquiry-form" id="gear-motor-inquiry-form">
@@ -129,7 +129,7 @@
 <div class="bottom-inquiry-title" id="gear-motor-bottom-inquiry-title">» INQUIRY</div>
 <div class="bottom-inquiry-body">
 <div class="inquiry-contact" aria-label="Contact information">
-<div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span><a href="mailto:lillyyutang@gmail.com">lillyyutang@gmail.com</a></div>
+<div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span><a href="mailto:info@smktrans.com">info@smktrans.com</a></div>
 <div class="inquiry-contact-item"><span class="inquiry-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l2 5-2.2 1.8a15.5 15.5 0 0 0 5.4 5.4L16 13l5 2 .5 2.4a2 2 0 0 1-2.2 2.5C11 19.3 4.7 13 4.4 4.8A2 2 0 0 1 6.6 3.5Z"></path></svg></span><a href="tel:+8615262579178">+86 152 6257 9178</a></div>
 </div>
 <p class="bottom-inquiry-intro">Please leave your detailed requirements and contact information. We will reply ASAP.</p>
@@ -206,7 +206,7 @@
       status.textContent='Thank you! Your inquiry has been sent successfully. We will contact you soon.';
     } catch(error) {
       status.className='form-status error';
-      status.textContent=error.message+' You can also email lillyyutang@gmail.com.';
+      status.textContent=error.message+' You can also email info@smktrans.com.';
     } finally {
       button.disabled=false;
       button.textContent='SEND INQUIRY VIA EMAIL';
@@ -215,5 +215,5 @@
 })();
 </script>
 <script>
-(function(){const f=document.getElementById('gear-motor-bottom-inquiry-form');if(!f)return;f.addEventListener('submit',async function(e){e.preventDefault();const b=f.querySelector('button[type="submit"]'),s=document.getElementById('gear-motor-bottom-status'),d=Object.fromEntries(new FormData(f).entries());b.disabled=true;b.textContent='SENDING...';s.className='form-status';s.textContent='Sending your inquiry securely...';try{const r=await fetch('/api/send-inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}),j=await r.json().catch(function(){return{}});if(!r.ok)throw new Error(j.error||'Unable to send your inquiry.');if(typeof trackAnalyticsEvent==='function')trackAnalyticsEvent('generate_lead',{form_name:'gear_motor_bottom_inquiry',product:'Worm Gear Motor',product_model:d.model||'',quantity:d.quantity||'',method:'email_form',page_path:window.location.pathname});f.reset();s.className='form-status success';s.textContent='Thank you! Your inquiry has been sent successfully.'}catch(err){s.className='form-status error';s.textContent=err.message+' You can also email lillyyutang@gmail.com.'}finally{b.disabled=false;b.textContent='SEND MESSAGE'}})})();
+(function(){const f=document.getElementById('gear-motor-bottom-inquiry-form');if(!f)return;f.addEventListener('submit',async function(e){e.preventDefault();const b=f.querySelector('button[type="submit"]'),s=document.getElementById('gear-motor-bottom-status'),d=Object.fromEntries(new FormData(f).entries());b.disabled=true;b.textContent='SENDING...';s.className='form-status';s.textContent='Sending your inquiry securely...';try{const r=await fetch('/api/send-inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}),j=await r.json().catch(function(){return{}});if(!r.ok)throw new Error(j.error||'Unable to send your inquiry.');if(typeof trackAnalyticsEvent==='function')trackAnalyticsEvent('generate_lead',{form_name:'gear_motor_bottom_inquiry',product:'Worm Gear Motor',product_model:d.model||'',quantity:d.quantity||'',method:'email_form',page_path:window.location.pathname});f.reset();s.className='form-status success';s.textContent='Thank you! Your inquiry has been sent successfully.'}catch(err){s.className='form-status error';s.textContent=err.message+' You can also email info@smktrans.com.'}finally{b.disabled=false;b.textContent='SEND MESSAGE'}})})();
 </script></body></html>
