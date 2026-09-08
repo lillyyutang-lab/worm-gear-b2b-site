@@ -30,8 +30,7 @@
 .info-card,.product-visual,.select-card{background:#fff;border:1px solid #dce6f4;border-radius:11px;padding:22px;box-shadow:0 8px 20px rgba(10,38,78,.05)}
 .info-card h3,.select-card h3{margin:0 0 10px;color:#073f8f}.info-card p,.select-card p{margin:0;color:#4d5b73;line-height:1.62}
 .product-visuals{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:25px 0}
-.product-visual img{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:8px;background:#fff}
-.product-visual h3{font-size:18px;color:#073f8f;margin:12px 0 0}.product-visual a{text-decoration:none}
+.product-visual{display:flex;flex-direction:column;min-height:0}.product-visual a{display:flex;flex-direction:column;text-decoration:none}.product-visual img{display:block;width:100%;height:240px!important;max-height:240px!important;object-fit:contain;border-radius:8px;background:#fff}.product-visual h3{font-size:18px;color:#073f8f;margin:14px 0 0;line-height:1.35}
 .app-table{width:100%;border-collapse:collapse;margin-top:22px;background:#fff}
 .app-table th,.app-table td{padding:13px;border:1px solid #d8e2ef;text-align:left;vertical-align:top;line-height:1.5}
 .app-table th{background:#eaf3ff;color:#073f8f}.app-table a{font-weight:700}
@@ -54,7 +53,7 @@
 .form-grid-three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .breadcrumb{padding:14px 0;color:#61718a;font-size:14px}.breadcrumb a{color:#075fc4}
 @media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}.product-visuals,.why-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:760px){.app-hero{padding:50px 0}.app-hero-grid,.selection-layout,.product-visuals,.why-grid,.card-grid,.form-grid-three{grid-template-columns:1fr}.app-hero h1{font-size:35px}.app-section{padding:42px 0}.app-section h2{font-size:27px}.app-actions a{width:100%}.selection-list,.example-lines{grid-template-columns:1fr}.app-table{display:block;overflow-x:auto;font-size:14px}.app-table th,.app-table td{min-width:145px;padding:10px}.inquiry-wrap{padding:19px}}
+@media(max-width:760px){.product-visual img{height:210px!important;max-height:210px!important}.app-hero{padding:50px 0}.app-hero-grid,.selection-layout,.product-visuals,.why-grid,.card-grid,.form-grid-three{grid-template-columns:1fr}.app-hero h1{font-size:35px}.app-section{padding:42px 0}.app-section h2{font-size:27px}.app-actions a{width:100%}.selection-list,.example-lines{grid-template-columns:1fr}.app-table{display:block;overflow-x:auto;font-size:14px}.app-table th,.app-table td{min-width:145px;padding:10px}.inquiry-wrap{padding:19px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
