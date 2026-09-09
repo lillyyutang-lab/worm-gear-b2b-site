@@ -1,4 +1,4 @@
-const RECIPIENT = 'lillyyutang@gmail.com';
+const RECIPIENT = 'info@smktrans.com';
 const EMAIL_DOMAIN = process.env.RESEND_EMAIL_DOMAIN || 'smktrans.com';
 const FROM = 'SMK Transmission <inquiry@' + EMAIL_DOMAIN + '>';
 
