@@ -2149,3 +2149,18 @@ details p { margin: 10px 0 0; }
 @media(max-width:1180px){.nav{gap:14px}.menu{gap:18px}.nav-actions .quote-btn{display:none}}
 @media(max-width:767px){.nav-actions{margin-left:auto;margin-right:8px}.language-picker select{height:40px;min-width:102px;padding-left:10px}.locale-intro{padding:48px 0 24px}.locale-intro h1{font-size:32px}}
 
+
+
+/* Desktop navigation: keep every label on one line. */
+@media (min-width:961px) {
+  .nav { gap:14px; }
+  .menu { gap:clamp(10px,1.25vw,24px); font-size:13px; flex-wrap:nowrap; }
+  .menu a { white-space:nowrap; flex-shrink:0; }
+}
+@media (min-width:961px) and (max-width:1400px) {
+  .nav { gap:10px; }
+  .menu { gap:10px; font-size:12px; }
+  .nav-actions { gap:8px; }
+  .language-picker select { min-width:104px; padding-left:10px; padding-right:28px; }
+  .nav-actions .quote-btn { display:inline-flex; padding-left:14px; padding-right:14px; font-size:13px; white-space:nowrap; }
+}
