@@ -49,6 +49,7 @@ The calculator returns application-specific results from buyer inputs. NMRV mini
 - How to match a three-phase motor to a gearbox: https://www.smktrans.com/news-how-to-match-three-phase-motor-to-gearbox.html
 - Worm gear motor selection guide: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
 - Worm gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
+- Worm gear high reduction ratio and self-locking principle: https://www.smktrans.com/news-worm-gear-high-reduction-self-locking.html
 
 These engineering guides cover product definitions, selection formulas, application data, duty, mounting, safety limitations and frequently asked questions for industrial buyers.
 
