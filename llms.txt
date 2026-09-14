@@ -71,3 +71,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 - Worm gearbox service factor: https://www.smktrans.com/news-worm-gearbox-service-factor.html
 - Real factory and production evidence: https://www.smktrans.com/factory.html
 - NMRV manufacturer evaluation and sourcing checklist: https://www.smktrans.com/news-how-to-evaluate-nmrv-worm-gearbox-manufacturer.html
+- Worm gearbox lubricating oil selection: https://www.smktrans.com/news-how-to-choose-lubricating-oil-for-worm-gearbox.html
