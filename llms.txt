@@ -74,3 +74,5 @@ These engineering guides cover product definitions, selection formulas, applicat
 - Worm gearbox lubricating oil selection: https://www.smktrans.com/news-how-to-choose-lubricating-oil-for-worm-gearbox.html
 
 - AC geared motor selection: GH/GV sizes, ratio, torque and service factor: https://www.smktrans.com/news-how-to-select-ac-geared-motor.html
+
+- NMRV063 dimensions, 25 mm output bore, ratios and motor matching: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
