@@ -221,3 +221,5 @@
 </script></body></html>
 
 <style>main > section.section:has(> .container > p > a[href="conveyor-gearbox.html"]){padding-top:0;padding-bottom:0}</style>
+
+<script>document.querySelectorAll('main').forEach(m=>m.childNodes.forEach(n=>{if(n.nodeType===3&&n.nodeValue.trim()==='\\n')n.remove()}))</script>
