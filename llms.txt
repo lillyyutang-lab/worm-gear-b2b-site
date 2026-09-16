@@ -31,6 +31,7 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - Product overview: https://www.smktrans.com/products.html
 - Gearbox knowledge center: https://www.smktrans.com/news.html
 - RV63 worm gearbox ratio, torque and motor selection guide: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
+- RV75 / NMRV075 dimensions, 28 mm output bore, ratios and motor-flange matching: https://www.smktrans.com/news-rv75-worm-gearbox-dimensions-ratio-motor-selection.html
 - Contact: https://www.smktrans.com/contact.html
 - Sitemap: https://www.smktrans.com/sitemap.xml
 
