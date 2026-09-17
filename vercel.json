@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/news-are-worm-gearboxes-self-locking.html",
+      "destination": "/news-are-worm-gearboxes-self-locking-engineering-guide.html",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
