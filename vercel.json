@@ -9,6 +9,11 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/news-rv90-worm-gearbox-dimensions-bore-ratios.html",
+      "destination": "/news-rv90-nmrv090-worm-gearbox-ratio-speed-selection.html",
+      "permanent": true
     }
   ],
   "headers": [
