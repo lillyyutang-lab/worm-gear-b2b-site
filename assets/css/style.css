@@ -357,6 +357,7 @@ img {
   object-fit: contain;
   display: block;
   border-radius: 8px;
+  object-position: center;
 }
 
 .news-card small {
