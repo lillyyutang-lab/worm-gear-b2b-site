@@ -77,3 +77,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 - AC geared motor selection: GH/GV sizes, ratio, torque and service factor: https://www.smktrans.com/news-how-to-select-ac-geared-motor.html
 
 - NMRV063 dimensions, 25 mm output bore, ratios and motor matching: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
+- NMRV110 dimensions, 42 mm output bore, ratios and motor matching: https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html
