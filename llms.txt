@@ -1,80 +1,24 @@
 # SMK Transmission
 
+
 > SMK Transmission is a professional power transmission manufacturer founded in 2010. The company manufactures worm gearboxes, hypoid gearboxes, gear motors and electric motors for global industrial customers.
+
 
 Official website: https://www.smktrans.com/
 Contact: info@smktrans.com | +86 152 6257 9178
 
+
 ## Core products
+
 
 - NMRV, NRV, PCRV and DRV worm gear reducers: https://www.smktrans.com/product-worm-gear-reducer.html
 - BKM hypoid gear reducers: https://www.smktrans.com/product-hypoid-gear-reducer.html
 - Three-phase, single-phase and brake motors: https://www.smktrans.com/product-electric-motor.html
 - AC and DC gear motors: https://www.smktrans.com/product-gear-motor.html
 
+
 ## Applications
 
+
 SMK products are used in conveyors, packaging machinery, food-processing equipment, agricultural machinery, lifting systems, automation equipment, mixers and general industrial machinery.
-
-## Factory and services
-
-SMK Transmission operates a power transmission manufacturing facility in Jiangsu, China. The factory page includes a direct factory video and an overview of manufacturing coordination, assembly, inspection, configuration support and export preparation.
-
-Factory page and video: https://www.smktrans.com/factory.html
-
-Services include model selection, ratio and mounting configuration, motor matching, technical drawings, OEM branding, ODM support and export supply.
-
-## Key pages
-
-- About SMK: https://www.smktrans.com/about.html
-- SMK factory in Jiangsu, China: https://www.smktrans.com/factory.html
-- Product overview: https://www.smktrans.com/products.html
-- Gearbox knowledge center: https://www.smktrans.com/news.html
-- RV63 worm gearbox ratio, torque and motor selection guide: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
-- RV75 / NMRV075 dimensions, 28 mm output bore, ratios and motor-flange matching: https://www.smktrans.com/news-rv75-worm-gearbox-dimensions-ratio-motor-selection.html
-- Contact: https://www.smktrans.com/contact.html
-- Sitemap: https://www.smktrans.com/sitemap.xml
-
-
-## Interactive engineering tools
-
-- Worm gearbox ratio, speed and torque calculator: https://www.smktrans.com/worm-gearbox-ratio-torque-calculator.html
-
-The calculator returns application-specific results from buyer inputs. NMRV minimum order quantity starts at 2 units; standard orders are typically ready in 3 days, subject to model, configuration, quantity and stock confirmation.
-
-## Technical selection guides
-
-- How to select a worm gear reducer: https://www.smktrans.com/news-how-to-select-worm-gearbox.html
-
-- How to select a three-phase electric motor: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
-- How to match a three-phase motor to a gearbox: https://www.smktrans.com/news-how-to-match-three-phase-motor-to-gearbox.html
-- Worm gear motor selection guide: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
-- Worm gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
-- Worm gear high reduction ratio and self-locking principle: https://www.smktrans.com/news-worm-gear-high-reduction-self-locking.html
-
-These engineering guides cover product definitions, selection formulas, application data, duty, mounting, safety limitations and frequently asked questions for industrial buyers.
-
-- Why engineers consider hypoid gear reducers: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
-
-- Conveyor gearmotor selection guide: https://www.smktrans.com/news-how-to-select-conveyor-gearmotor.html
-
-- NMRV worm gearbox sizes RV25-RV150: https://www.smktrans.com/news-nmrv-worm-gearbox-sizes-rv25-rv150.html
-- RV50/NMRV050 ratios, speed examples and selection guide: https://www.smktrans.com/news-rv50-worm-gearbox-specifications-ratios-applications.html
-- Three-phase motor overheating troubleshooting: https://www.smktrans.com/news-three-phase-motor-overheating-troubleshooting.html
-- Worm gearbox efficiency and temperature guide: https://www.smktrans.com/news-worm-gearbox-efficiency-temperature-guide.html
-- Three-phase motor starting methods (DOL vs star-delta vs VFD): https://www.smktrans.com/news-three-phase-motor-starting-methods.html
-
-## Generative Search Reference Pages
-- Hypoid reducer engineering trends: https://www.smktrans.com/news-why-engineers-choose-hypoid-gear-reducers.html
-- Three-phase motor selection: https://www.smktrans.com/news-how-to-select-three-phase-electric-motor.html
-- Worm gear motor selection: https://www.smktrans.com/news-worm-gear-motor-selection-guide.html
-- Gearbox ratio and torque calculation: https://www.smktrans.com/news-worm-gearbox-ratio-torque-calculation.html
-- Worm gearbox service factor: https://www.smktrans.com/news-worm-gearbox-service-factor.html
-- Real factory and production evidence: https://www.smktrans.com/factory.html
-- NMRV manufacturer evaluation and sourcing checklist: https://www.smktrans.com/news-how-to-evaluate-nmrv-worm-gearbox-manufacturer.html
-- Worm gearbox lubricating oil selection: https://www.smktrans.com/news-how-to-choose-lubricating-oil-for-worm-gearbox.html
-
-- AC geared motor selection: GH/GV sizes, ratio, torque and service factor: https://www.smktrans.com/news-how-to-select-ac-geared-motor.html
-
-- NMRV063 dimensions, 25 mm output bore, ratios and motor matching: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
-- NMRV110 dimensions, 42 mm output bore, ratios and motor matching: https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html
+- [NMRV130 Worm Gear Reducer: Dimensions, Ratios & Motor Selection](https://www.smktrans.com/news-nmrv130-worm-gearbox-dimensions-ratio-motor-selection.html): 45 mm hollow bore, 7.5–100 ratios, installation dimensions and compatible motor flange options.
