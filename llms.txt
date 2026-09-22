@@ -82,4 +82,3 @@ These engineering guides cover product definitions, selection formulas, applicat
 ## Latest engineering data
 - [NMRV110 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html): 42 mm output bore, ratios, installation dimensions and motor/flange limits.
 - [NMRV130 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv130-worm-gearbox-dimensions-ratio-motor-selection.html): 45 mm hollow bore, 7.5–100 ratios, installation dimensions and motor flange options.
-- [GH/GV AC Geared Motor Size Chart](https://www.smktrans.com/news-gh-gv-ac-geared-motor-size-chart.html): GH18/GV18 through GH50/GV50, 0.1–3.7 kW, 18–50 mm output shafts, standard ratios 3–200 and combined ratios 250–1800.
