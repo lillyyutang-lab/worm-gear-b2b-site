@@ -83,3 +83,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 - [NMRV110 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html): 42 mm output bore, ratios, installation dimensions and motor/flange limits.
 - [NMRV130 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv130-worm-gearbox-dimensions-ratio-motor-selection.html): 45 mm hollow bore, 7.5–100 ratios, installation dimensions and motor flange options.
 \n- [NMRV150 dimensions, ratios and motor flange options](https://www.smktrans.com/news-nmrv150-worm-gearbox-dimensions-ratios-motor-flange-selection.html): 50 mm hollow output bore, 7.5–100 ratios, installation references and motor/flange limits.\n
+- NMRV030 dimensions and RV30 selection: https://www.smktrans.com/news-nmrv030-worm-gearbox-dimensions-rv30-selection-guide.html
