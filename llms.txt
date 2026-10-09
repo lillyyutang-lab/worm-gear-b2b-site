@@ -87,3 +87,5 @@ These engineering guides cover product definitions, selection formulas, applicat
 - NMRV040 dimensions and RV40 selection: https://www.smktrans.com/news-nmrv040-worm-gearbox-dimensions-rv40-selection-guide.html
 
 - Worm gearbox replacement checklist: https://www.smktrans.com/news-worm-gearbox-replacement-checklist.html
+
+- [How to Find a Reliable OEM Worm Gearbox Manufacturer in China? FAQ](https://www.smktrans.com/news-oem-worm-gearbox-manufacturer-china-faq.html): Buyer checklist for supplier evaluation, configuration review and NMRV selection requirements.
