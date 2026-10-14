@@ -95,3 +95,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 - [What Are the Differences Between Chinese and European NMRV Gearboxes?](https://www.smktrans.com/news-chinese-vs-european-nmrv-gearboxes-faq.html): FAQ covering comparison criteria, replacement checks, materials and OEM configuration.
 
 - WP Series Worm Gearboxes: https://www.smktrans.com/product-wp-series-worm-gearboxes.html — cast-iron right-angle worm reducers, frame sizes 40–250 and ratios 10:1–60:1.
+- SWL Screw Lift Worm Gear: https://www.smktrans.com/product-swl-screw-lift-worm-gear.html — industrial worm screw jacks, 9.8–980 kN maximum load and 100–2000 mm lifting distance.
