@@ -96,3 +96,4 @@ These engineering guides cover product definitions, selection formulas, applicat
 
 - WP Series Worm Gearboxes: https://www.smktrans.com/product-wp-series-worm-gearboxes.html — cast-iron right-angle worm reducers, frame sizes 40–250 and ratios 10:1–60:1.
 - SWL Screw Lift Worm Gear: https://www.smktrans.com/product-swl-screw-lift-worm-gear.html — industrial worm screw jacks, 9.8–980 kN maximum load and 100–2000 mm lifting distance.
+- X/B/JXJ Series Cycloidal Reducers: https://www.smktrans.com/product-x-b-jxj-cycloidal-reducers.html — cycloidal pin-wheel reducers, 0.37–55 kW, 9:1–1849:1 ratios and foot or flange mounting.
