@@ -34,6 +34,7 @@ Services include model selection, ratio and mounting configuration, motor matchi
 - RV75 / NMRV075 dimensions, 28 mm output bore, ratios and motor-flange matching: https://www.smktrans.com/news-rv75-worm-gearbox-dimensions-ratio-motor-selection.html
 - Contact: https://www.smktrans.com/contact.html
 - Sitemap: https://www.smktrans.com/sitemap.xml
+- Latest content sitemap: https://www.smktrans.com/sitemap-latest.xml
 
 
 ## Interactive engineering tools
@@ -77,12 +78,15 @@ These engineering guides cover product definitions, selection formulas, applicat
 - AC geared motor selection: GH/GV sizes, ratio, torque and service factor: https://www.smktrans.com/news-how-to-select-ac-geared-motor.html
 
 - NMRV063 dimensions, 25 mm output bore, ratios and motor matching: https://www.smktrans.com/news-rv63-worm-gearbox-ratio-torque-motor-selection.html
+- RV25 dimensions, input shaft and mounting-hole reference: https://www.smktrans.com/news-rv25-worm-gearbox-dimensions.html
+- Worm wheel material guide: aluminum bronze, tin bronze and cast bronze: https://www.smktrans.com/news-worm-wheel-materials-aluminum-tin-cast-bronze.html
 
 
 ## Latest engineering data
 - [NMRV110 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html): 42 mm output bore, ratios, installation dimensions and motor/flange limits.
 - [NMRV130 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv130-worm-gearbox-dimensions-ratio-motor-selection.html): 45 mm hollow bore, 7.5–100 ratios, installation dimensions and motor flange options.
-\n- [NMRV150 dimensions, ratios and motor flange options](https://www.smktrans.com/news-nmrv150-worm-gearbox-dimensions-ratios-motor-flange-selection.html): 50 mm hollow output bore, 7.5–100 ratios, installation references and motor/flange limits.\n
+- [NMRV150 dimensions, ratios and motor flange options](https://www.smktrans.com/news-nmrv150-worm-gearbox-dimensions-ratios-motor-flange-selection.html): 50 mm hollow output bore, 7.5–100 ratios, installation references and motor/flange limits.
+
 - NMRV030 dimensions and RV30 selection: https://www.smktrans.com/news-nmrv030-worm-gearbox-dimensions-rv30-selection-guide.html
 - NMRV040 dimensions and RV40 selection: https://www.smktrans.com/news-nmrv040-worm-gearbox-dimensions-rv40-selection-guide.html
 
@@ -91,8 +95,6 @@ These engineering guides cover product definitions, selection formulas, applicat
 - [How to Find a Reliable OEM Worm Gearbox Manufacturer in China? FAQ](https://www.smktrans.com/news-oem-worm-gearbox-manufacturer-china-faq.html): Buyer checklist for supplier evaluation, configuration review and NMRV selection requirements.
 
 - [What Are the Differences Between Chinese and European NMRV Gearboxes?](https://www.smktrans.com/news-chinese-vs-european-nmrv-gearboxes-faq.html): FAQ covering replacement dimensions, materials and OEM customization considerations.
-
-- [What Are the Differences Between Chinese and European NMRV Gearboxes?](https://www.smktrans.com/news-chinese-vs-european-nmrv-gearboxes-faq.html): FAQ covering comparison criteria, replacement checks, materials and OEM configuration.
 
 - WP Series Worm Gearboxes: https://www.smktrans.com/product-wp-series-worm-gearboxes.html — cast-iron right-angle worm reducers, frame sizes 40–250 and ratios 10:1–60:1.
 - SWL Screw Lift Worm Gear: https://www.smktrans.com/product-swl-screw-lift-worm-gear.html — industrial worm screw jacks, 9.8–980 kN maximum load and 100–2000 mm lifting distance.
