@@ -213,3 +213,20 @@ if(document.readyState==='loading'){
 }else{
   loadDeferredHeroVideo();
 }
+
+// Keep the RV25 dimensional guide visible at the top of the Knowledge Center.
+function addRv25KnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-rv25-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.rv25News='true';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>October 20, 2026</small><h3>RV25 Worm Gearbox Dimensions: Shaft Size &amp; Mounting Holes</h3><p>Check the RV25 technical drawing, input shaft interface and mounting dimensions before installation or replacement.</p><a class="btn small" href="news-rv25-worm-gearbox-dimensions.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
+
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
+}else{
+  addRv25KnowledgeCard();
+}
