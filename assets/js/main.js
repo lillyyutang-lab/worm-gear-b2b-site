@@ -225,8 +225,26 @@ function addRv25KnowledgeCard(){
   grid.prepend(card);
 }
 
+// Match the established blog conversion entry on the RV25 dimensional guide.
+function addRv25SelectionCta(){
+  if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
+  if(document.querySelector('[data-rv25-selection-cta]')) return;
+
+  const article=document.querySelector('main.content.light');
+  if(!article) return;
+
+  const cta=document.createElement('section');
+  cta.className='cta article-cta';
+  cta.dataset.rv25SelectionCta='true';
+  cta.setAttribute('aria-label','RV25 gearbox selection support');
+  cta.innerHTML='<div class="container"><div class="cta-copy"><h2>Need Help Selecting a Worm Gearbox?</h2><p>Send the motor power, ratio or output speed, required torque and operating conditions. SMK will check a suitable gearbox configuration.</p></div><div class="cta-actions"><a class="cta-whatsapp" href="https://wa.me/8615262579178?text=Hello%20SMK%2C%20please%20help%20select%20a%20worm%20gearbox." target="_blank" rel="noopener noreferrer">CHAT ON WHATSAPP</a><a class="cta-quote" href="mailto:info@smktrans.com?subject=Worm%20Gearbox%20Selection">EMAIL YOUR REQUIREMENTS</a></div></div>';
+  article.insertAdjacentElement('afterend',cta);
+}
+
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
 }else{
   addRv25KnowledgeCard();
+  addRv25SelectionCta();
 }
