@@ -241,10 +241,24 @@ function addRv25SelectionCta(){
   article.insertAdjacentElement('afterend',cta);
 }
 
+// Keep the visible KM Series FAQ aligned with its Product and FAQ structured data.
+function addHypoidSelectionFaq(){
+  if(!location.pathname.endsWith('/product-hypoid-gear-reducer.html')) return;
+  const faq=document.querySelector('#hypoid-faq');
+  if(!faq||document.querySelector('[data-hypoid-selection-faq]')) return;
+
+  const item=document.createElement('details');
+  item.dataset.hypoidSelectionFaq='true';
+  item.innerHTML='<summary>What information is needed for KM Series model selection?</summary><p>Provide the application, motor input details, required output speed or ratio, required torque, mounting arrangement, output configuration and operating conditions. SMK can then review the requested configuration.</p>';
+  faq.parentElement.querySelector('details:nth-of-type(3)')?.insertAdjacentElement('afterend',item);
+}
+
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
+  document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
 }else{
   addRv25KnowledgeCard();
   addRv25SelectionCta();
+  addHypoidSelectionFaq();
 }
