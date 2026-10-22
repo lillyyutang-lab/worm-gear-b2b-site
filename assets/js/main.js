@@ -232,7 +232,7 @@ function addKm28KnowledgeCard(){
   const card=document.createElement('article');
   card.className='news-card';
   card.dataset.km28News='true';
-  card.innerHTML='<div class="news-thumb"><img src="assets/images/km28b-km28c-dimensions.png" alt="KM28B and KM28C hypoid gearbox dimensions" loading="lazy"></div><div><small>October 22, 2026</small><h3>KM28B &amp; KM28C Hypoid Gearbox Dimensions</h3><p>Compare ratios, motor flanges and NMRV050 mounting checks before replacement.</p><a class="btn small" href="news-km28b-km28c-hypoid-gearbox-dimensions.html">READ GUIDE &rarr;</a></div>';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>October 22, 2026</small><h3>KM28B &amp; KM28C Hypoid Gearbox Dimensions</h3><p>Compare ratios, motor flanges and NMRV050 mounting checks before replacement.</p><a class="btn small" href="news-km28b-km28c-hypoid-gearbox-dimensions.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
 
