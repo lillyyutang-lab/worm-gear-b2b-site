@@ -236,6 +236,17 @@ function addKm28KnowledgeCard(){
   grid.prepend(card);
 }
 
+// Surface the RV motor-power selection guide in the Knowledge Center.
+function addRvMotorPowerKnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-rv-motor-power-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.rvMotorPowerNews='true';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>October 22, 2026</small><h3>RV25–RV150 Worm Gearbox Motor Power Selection</h3><p>Compare ratio-dependent motor power, output speed and listed torque under the supplied 1400 rpm reference condition.</p><a class="btn small" href="news-rv25-rv150-worm-gearbox-motor-power-selection.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
+
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -280,12 +291,14 @@ function addHypoidSelectionFaq(){
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addKm28KnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addRvMotorPowerKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
 }else{
   addRv25KnowledgeCard();
   addKm28KnowledgeCard();
+  addRvMotorPowerKnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();

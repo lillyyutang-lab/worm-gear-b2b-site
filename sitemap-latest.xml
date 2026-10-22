@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.smktrans.com/news-rv25-rv150-worm-gearbox-motor-power-selection.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.smktrans.com/assets/images/rv25-rv150-worm-gearbox-motor-power-table.png</image:loc>
+      <image:title>RV25–RV150 worm gearbox motor power and output torque table</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.smktrans.com/news-rv25-worm-gearbox-dimensions.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
