@@ -225,6 +225,17 @@ function addRv25KnowledgeCard(){
   grid.prepend(card);
 }
 
+// Surface the new KM28 dimensional guide in the Knowledge Center without changing its URL.
+function addKm28KnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-km28-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.km28News='true';
+  card.innerHTML='<div class="news-thumb"><img src="assets/images/km28b-km28c-dimensions.png" alt="KM28B and KM28C hypoid gearbox dimensions" loading="lazy"></div><div><small>October 22, 2026</small><h3>KM28B &amp; KM28C Hypoid Gearbox Dimensions</h3><p>Compare ratios, motor flanges and NMRV050 mounting checks before replacement.</p><a class="btn small" href="news-km28b-km28c-hypoid-gearbox-dimensions.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
+
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -268,11 +279,13 @@ function addHypoidSelectionFaq(){
 
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addKm28KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
 }else{
   addRv25KnowledgeCard();
+  addKm28KnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
