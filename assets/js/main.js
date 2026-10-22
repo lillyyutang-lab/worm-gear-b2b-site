@@ -241,6 +241,19 @@ function addRv25SelectionCta(){
   article.insertAdjacentElement('afterend',cta);
 }
 
+// Strengthen the RV25 page's dimension-and-replacement topic cluster with real factory context.
+function addRv25TechnicalResources(){
+  if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
+  const article=document.querySelector('main.content.light .article-body');
+  if(!article||document.querySelector('[data-rv25-resources]')) return;
+
+  const resources=document.createElement('section');
+  resources.className='article-resources';
+  resources.dataset.rv25Resources='true';
+  resources.innerHTML='<h2>RV25 Drawing, Mounting and Replacement Resources</h2><p>Use the <a href="news-nmrv-worm-gearbox-sizes-rv25-rv150.html">NMRV RV25–RV150 size guide</a> to compare the RV25 frame with the wider product family. Before installation, confirm the operating orientation with the <a href="news-nmrv-worm-gearbox-mounting-positions.html">NMRV mounting-position guide</a>. For an existing unit, follow the <a href="news-worm-gearbox-replacement-checklist.html">worm gearbox replacement checklist</a> and compare the nameplate, ratio, output interface and motor flange—not the frame size alone.</p><figure class="article-factory-evidence"><img src="assets/images/smk-nmrv-gearbox-assembly-line.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Actual SMK worm gearbox assembly workstations in Jiangsu, China"><figcaption>Actual SMK worm gearbox assembly workstations. Final RV25 configuration is reviewed against the required ratio, interfaces and operating duty.</figcaption></figure>';
+  article.append(resources);
+}
+
 // Keep the visible KM Series FAQ aligned with its Product and FAQ structured data.
 function addHypoidSelectionFaq(){
   if(!location.pathname.endsWith('/product-hypoid-gear-reducer.html')) return;
@@ -256,9 +269,11 @@ function addHypoidSelectionFaq(){
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
+  document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
 }else{
   addRv25KnowledgeCard();
   addRv25SelectionCta();
+  addRv25TechnicalResources();
   addHypoidSelectionFaq();
 }

@@ -2173,3 +2173,11 @@ details p { margin: 10px 0 0; }
   .language-picker select { min-width:104px; padding-left:10px; padding-right:28px; }
   .nav-actions .quote-btn { display:inline-flex; padding-left:14px; padding-right:14px; font-size:13px; white-space:nowrap; }
 }
+
+/* Engineering articles: verifiable workshop evidence and contextual resource links. */
+.article-resources { margin-top: 38px; padding-top: 12px; border-top: 1px solid #dce7f3; }
+.article-resources h2 { color: #073f8f; }
+.article-resources a { color: #075ec4; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.article-factory-evidence { margin: 22px 0 0; }
+.article-factory-evidence img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
+.article-factory-evidence figcaption { margin-top: 8px; color: #5b6d84; font-size: 14px; line-height: 1.55; }
