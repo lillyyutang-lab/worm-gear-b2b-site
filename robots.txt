@@ -1,5 +1,31 @@
 User-agent: *
 Allow: /
 
+# Explicit AI-search crawler access. The site content and published technical
+# data may be crawled; this does not grant access to any private system.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://www.smktrans.com/sitemap.xml
 Sitemap: https://www.smktrans.com/sitemap-latest.xml
