@@ -21,6 +21,22 @@ function loadGoogleAnalytics(){
 // The library remains asynchronous and does not block page rendering.
 loadGoogleAnalytics();
 
+// Microsoft Clarity: behavioral analytics for heatmaps and session recordings.
+// Loaded asynchronously on every public page that uses this shared script.
+const clarityProjectId='z3olg82fyw';
+
+function loadMicrosoftClarity(){
+  if(document.querySelector('script[data-smk-clarity]')) return;
+  window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};
+  const clarityScript=document.createElement('script');
+  clarityScript.async=true;
+  clarityScript.src='https://www.clarity.ms/tag/'+encodeURIComponent(clarityProjectId);
+  clarityScript.dataset.smkClarity='true';
+  document.head.appendChild(clarityScript);
+}
+
+loadMicrosoftClarity();
+
 function trackAnalyticsEvent(eventName,eventParameters){
   loadGoogleAnalytics();
   window.gtag('event',eventName,Object.assign({
