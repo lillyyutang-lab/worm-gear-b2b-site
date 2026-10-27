@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.smktrans.com/news-worm-gear-reducer-motor-guide.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.smktrans.com/assets/images/worm-gear-reducer-motor-factory.jpg</image:loc>
+      <image:title>SMK worm gear reducer motor assembly in the factory</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.smktrans.com/news-rv25-rv150-worm-gearbox-motor-power-selection.html</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
