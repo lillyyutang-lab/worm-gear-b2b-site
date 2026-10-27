@@ -360,6 +360,16 @@ img {
   object-position: center;
 }
 
+.news-thumb.news-photo {
+  overflow: hidden;
+  background: #dce7f6;
+}
+
+.news-thumb.news-photo img {
+  display: block;
+  object-fit: cover;
+}
+
 .news-card small {
   color: #595959;
 }

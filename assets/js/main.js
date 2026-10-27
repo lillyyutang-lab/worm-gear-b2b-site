@@ -270,7 +270,7 @@ function addWormGearReducerMotorKnowledgeCard(){
   const card=document.createElement('article');
   card.className='news-card';
   card.dataset.wormGearReducerMotorNews='true';
-  card.innerHTML='<img class="news-image" src="assets/images/worm-gear-reducer-motor-factory.jpg" width="2560" height="1920" loading="lazy" decoding="async" alt="SMK worm gear reducer motor assembly in the factory"><div><small>October 27, 2026</small><h3>Worm Gear Reducer Motor: Selection, Specifications &amp; Applications</h3><p>Match speed, torque, ratio, motor power, mounting and operating duty before confirming an RV drive assembly.</p><a class="btn small" href="news-worm-gear-reducer-motor-guide.html">READ GUIDE &rarr;</a></div>';
+  card.innerHTML='<div class="news-thumb news-photo"><img src="assets/images/worm-gear-reducer-motor-factory.jpg" width="2560" height="1920" loading="lazy" decoding="async" alt="SMK worm gear reducer motor assembly in the factory"></div><div><small>October 27, 2026</small><h3>Worm Gear Reducer Motor: Selection, Specifications &amp; Applications</h3><p>Match speed, torque, ratio, motor power, mounting and operating duty before confirming an RV drive assembly.</p><a class="btn small" href="news-worm-gear-reducer-motor-guide.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
 // Match the established blog conversion entry on the RV25 dimensional guide.
