@@ -273,6 +273,16 @@ function addWormGearReducerMotorKnowledgeCard(){
   card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>October 27, 2026</small><h3>Worm Gear Reducer Motor: Selection, Specifications &amp; Applications</h3><p>Match speed, torque, ratio, motor power, mounting and operating duty before confirming an RV drive assembly.</p><a class="btn small" href="news-worm-gear-reducer-motor-guide.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
+// Surface the NMRV motor-power selection guide in the Knowledge Center.
+function addNmrvMotorPowerKnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-nmrv-motor-power-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.nmrvMotorPowerNews='true';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 2, 2026</small><h3>What Motor Power Is Suitable for an NMRV Gearbox?</h3><p>Review common NMRV motor-power combinations and the ratio, torque and duty checks needed before final selection.</p><a class="btn small" href="news-nmrv-gearbox-motor-power-selection.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -319,6 +329,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addKm28KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRvMotorPowerKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addWormGearReducerMotorKnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addNmrvMotorPowerKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
@@ -327,6 +338,7 @@ if(document.readyState==='loading'){
   addKm28KnowledgeCard();
   addRvMotorPowerKnowledgeCard();
   addWormGearReducerMotorKnowledgeCard();
+  addNmrvMotorPowerKnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
