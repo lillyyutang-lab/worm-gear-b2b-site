@@ -294,6 +294,17 @@ function addUdl002SpeedVariatorKnowledgeCard(){
   card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 3, 2026</small><h3>UDL002 0.18 kW Stepless Speed Variator</h3><p>Check the UDL002 ratio, torque, shaft and B5 mounting dimensions before selection or replacement.</p><a class="btn small" href="news-udl002-018kw-stepless-speed-variator.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
+
+// Surface the UDL005B5 dimension guide in the Knowledge Center.
+function addUdl005b5KnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-udl005b5-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.udl005b5News='true';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 4, 2026</small><h3>UDL005B5 Variable Speed Drive Dimensions</h3><p>Check B5 flange, shaft, ratio, torque and 0.25/0.37 kW motor compatibility before replacement.</p><a class="btn small" href="news-udl005b5-variable-speed-drive-dimensions.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -370,6 +381,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addWormGearReducerMotorKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addNmrvMotorPowerKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl002SpeedVariatorKnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addUdl005b5KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
@@ -381,6 +393,7 @@ if(document.readyState==='loading'){
   addWormGearReducerMotorKnowledgeCard();
   addNmrvMotorPowerKnowledgeCard();
   addUdl002SpeedVariatorKnowledgeCard();
+  addUdl005b5KnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
