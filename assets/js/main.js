@@ -335,6 +335,34 @@ function addHypoidSelectionFaq(){
   faq.parentElement.querySelector('details:nth-of-type(3)')?.insertAdjacentElement('afterend',item);
 }
 
+// Add selection FAQ and conversion support to the existing SWL product page.
+function enhanceSwlScrewLiftPage(){
+  if(!location.pathname.endsWith('/product-swl-screw-lift-worm-gear.html')) return;
+  if(document.querySelector('[data-swl-selection-support]')) return;
+
+  const main=document.querySelector('main');
+  const inquiryTab=document.querySelector('[data-tab="inquiry"]');
+  const inquiryPanel=document.querySelector('#swl-inquiry');
+  document.querySelectorAll('a[href="#swl-inquiry"]').forEach((link)=>{
+    link.addEventListener('click',()=>{
+      inquiryTab?.click();
+      inquiryPanel?.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  if(!main) return;
+  const support=document.createElement('section');
+  support.className='swl-faq';
+  support.dataset.swlSelectionSupport='true';
+  support.setAttribute('aria-labelledby','swl-faq-title');
+  support.innerHTML='<div class="container readable"><h2 id="swl-faq-title">SWL Screw Lift FAQ</h2><details><summary>What information is needed to select an SWL screw lift?</summary><p>Provide static and dynamic load, stroke, lifting speed, duty cycle, input speed and power, screw orientation, mounting method and safety requirements.</p></details><details><summary>What is the listed SWL load range?</summary><p>The listed SWL models cover maximum loads from 9.8 kN to 980 kN. Confirm the selected model and actual operating conditions before ordering.</p></details><details><summary>Should an SWL screw lift be assumed to be self-locking?</summary><p>No. Do not rely on assumed self-locking for personnel or safety-critical lifting; use a suitable brake or independent safety device where required.</p></details><details><summary>What is the difference between JWM and JWB?</summary><p>JWM uses a trapezoidal screw configuration for heavy-load, low-speed and lower-frequency duty. JWB uses a ball screw configuration for higher-speed and higher-frequency duty, subject to the selected model and conditions.</p></details></div>';
+  main.insertAdjacentElement('afterend',support);
+  const cta=document.createElement('section');
+  cta.className='cta';
+  cta.setAttribute('aria-label','SWL screw lift selection support');
+  cta.innerHTML='<div class="container"><div class="cta-copy"><h2>Need an SWL Screw Lift Configuration Checked?</h2><p>Send the load, stroke, lifting speed, duty, mounting and safety requirements. SMK will review the requested configuration.</p></div><div class="cta-actions"><a class="cta-whatsapp" href="https://wa.me/8615262579178?text=Hello%20SMK%2C%20please%20help%20select%20an%20SWL%20screw%20lift." target="_blank" rel="noopener noreferrer">CHAT ON WHATSAPP</a><a class="cta-quote" href="mailto:info@smktrans.com?subject=SWL%20Screw%20Lift%20Selection">EMAIL YOUR REQUIREMENTS</a></div></div>';
+  support.insertAdjacentElement('afterend',cta);
+}
+
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addKm28KnowledgeCard,{once:true});
@@ -345,6 +373,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
+  document.addEventListener('DOMContentLoaded',enhanceSwlScrewLiftPage,{once:true});
 }else{
   addRv25KnowledgeCard();
   addKm28KnowledgeCard();
@@ -355,4 +384,5 @@ if(document.readyState==='loading'){
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
+  enhanceSwlScrewLiftPage();
 }
