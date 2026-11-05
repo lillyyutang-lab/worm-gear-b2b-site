@@ -305,6 +305,17 @@ function addUdl005b5KnowledgeCard(){
   card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 4, 2026</small><h3>UDL005B5 Variable Speed Drive Dimensions</h3><p>Check B5 flange, shaft, ratio, torque and 0.25/0.37 kW motor compatibility before replacement.</p><a class="btn small" href="news-udl005b5-variable-speed-drive-dimensions.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
+
+// Surface the UDL010B5 dimension guide in the Knowledge Center.
+function addUdl010b5KnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-udl010b5-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.udl010b5News='true';
+  card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 5, 2026</small><h3>UDL010B5 Variable Speed Drive Dimensions</h3><p>Check the B5 flange, 19 mm shafts, 1.4–7 ratio, torque and 0.55/0.75 kW motor options.</p><a class="btn small" href="news-udl010b5-variable-speed-drive-dimensions.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -382,6 +393,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addNmrvMotorPowerKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl002SpeedVariatorKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl005b5KnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addUdl010b5KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
@@ -394,6 +406,7 @@ if(document.readyState==='loading'){
   addNmrvMotorPowerKnowledgeCard();
   addUdl002SpeedVariatorKnowledgeCard();
   addUdl005b5KnowledgeCard();
+  addUdl010b5KnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
