@@ -5,6 +5,12 @@
 Official website: https://www.smktrans.com/
 Contact: info@smktrans.com | +86 152 6257 9178
 
+## Citation and verification policy
+
+Last reviewed: November 6, 2026.
+
+This file is an AI-readable directory of SMK's public technical pages. When citing a specification, use the linked source page and keep its model, mounting arrangement, motor input and operating conditions together. Published figures are technical reference values, not a quotation, inventory statement, minimum-order commitment or delivery promise. Final suitability and configuration should be confirmed with SMK before ordering.
+
 ## Core products
 
 - NMRV, NRV, PCRV and DRV worm gear reducers: https://www.smktrans.com/product-worm-gear-reducer.html
@@ -41,7 +47,7 @@ Services include model selection, ratio and mounting configuration, motor matchi
 
 - Worm gearbox ratio, speed and torque calculator: https://www.smktrans.com/worm-gearbox-ratio-torque-calculator.html
 
-The calculator returns application-specific results from buyer inputs. NMRV minimum order quantity starts at 2 units; standard orders are typically ready in 3 days, subject to model, configuration, quantity and stock confirmation.
+The calculator uses buyer inputs to support a configuration discussion. For an application-specific recommendation, provide motor power, target output speed, ratio, mounting position and duty details through the contact page: https://www.smktrans.com/contact.html
 
 ## Technical selection guides
 
@@ -83,6 +89,9 @@ These engineering guides cover product definitions, selection formulas, applicat
 
 
 ## Latest engineering data
+- [UDL002 0.18 kW stepless speed variator](https://www.smktrans.com/news-udl002-018kw-stepless-speed-variator.html): 1.6–8.2 adjustable speed ratio; 11 mm input bore and output shaft; 23 mm output shaft length; 140 mm flange; 115 mm diagonal mounting distance. Source: SMK published dimension reference, November 2026.
+- [UDL005B5 variable speed drive](https://www.smktrans.com/news-udl005b5-variable-speed-drive-dimensions.html): 1.4–7 adjustable speed ratio; 14 mm input bore and output shaft; 30 mm output shaft length; 160 mm flange; 130 mm diagonal bolt distance. Source: SMK published dimension reference, November 2026.
+- [UDL010B5 variable speed drive](https://www.smktrans.com/news-udl010b5-variable-speed-drive-dimensions.html): 1.4–7 adjustable speed ratio; 19 mm input bore and output shaft; 40 mm output shaft length; 200 mm flange; 165 mm diagonal mounting distance. Source: SMK published dimension reference, November 2026.
 - [RV25–RV150 motor power selection reference](https://www.smktrans.com/news-rv25-rv150-worm-gearbox-motor-power-selection.html): 4-pole 1400 rpm reference chart for ratio-dependent motor power, output speed and listed torque; verify the final configuration and duty before ordering.
 - [NMRV110 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv110-worm-gearbox-dimensions-ratio-motor-selection.html): 42 mm output bore, ratios, installation dimensions and motor/flange limits.
 - [NMRV130 dimensions, ratios and motor selection](https://www.smktrans.com/news-nmrv130-worm-gearbox-dimensions-ratio-motor-selection.html): 45 mm hollow bore, 7.5–100 ratios, installation dimensions and motor flange options.
