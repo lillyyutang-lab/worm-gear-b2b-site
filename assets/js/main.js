@@ -82,7 +82,12 @@ document.addEventListener('click',(event)=>{
   }
 
   if(/(?:^|\/)product-[^/?#]+\.html(?:$|[?#])/i.test(href)){
-    trackAnalyticsEvent('product_detail_click',{product_page:href.split(/[?#]/)[0],link_text:label,page_path:pagePath});
+    const productPage=href.split(/[?#]/)[0];
+    const productCard=link.closest('.product-detail');
+    const productName=((productCard&&productCard.querySelector('h2')&&productCard.querySelector('h2').textContent)||label||productPage).trim().replace(/\s+/g,' ').slice(0,150);
+    const productId=(productPage.match(/product-([^/]+)\.html$/i)||[])[1]||productPage;
+    trackAnalyticsEvent('product_detail_click',{product_page:productPage,link_text:label,page_path:pagePath});
+    trackAnalyticsEvent('select_item',{item_list_name:'Product Catalog',items:[{item_id:productId,item_name:productName,item_brand:'SMK Transmission',item_category:'Industrial Power Transmission'}]});
   }
 });
 
