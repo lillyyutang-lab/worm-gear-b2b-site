@@ -329,7 +329,7 @@ function addDrvDoubleReductionKnowledgeCard(){
   const card=document.createElement('article');
   card.className='news-card';
   card.dataset.drvDoubleReductionNews='true';
-  card.innerHTML='<div class="news-thumb"><img src="assets/images/drv-double-reduction-worm-gearbox-assembly.jpg" alt="DRV double reduction worm gearbox assembly" width="4096" height="3072" loading="eager" decoding="async"></div><div><small>November 10, 2026</small><h3>How to Select a DRV Double Reduction Worm Gearbox</h3><p>Use the supplied 100:1–900:1 ratio and low-speed reference to start a DRV two-stage gearbox selection.</p><a class="btn small" href="news-drv-double-reduction-worm-gearbox-selection.html">READ GUIDE &rarr;</a></div>';
+  card.innerHTML='<div class="news-thumb"><img src="assets/images/drv-double-reduction-worm-gearbox-guide.png" alt="DRV double reduction worm gearbox with 100:1 to 900:1 ratios" width="1254" height="1254" loading="eager" decoding="async"></div><div><small>November 10, 2026</small><h3>How to Select a DRV Double Reduction Worm Gearbox</h3><p>Use the supplied 100:1–900:1 ratio and low-speed reference to start a DRV two-stage gearbox selection.</p><a class="btn small" href="news-drv-double-reduction-worm-gearbox-selection.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
 
