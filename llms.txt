@@ -89,6 +89,7 @@ These engineering guides cover product definitions, selection formulas, applicat
 
 
 ## Latest engineering data
+- [DRV double reduction worm gearbox selection](https://www.smktrans.com/news-drv-double-reduction-worm-gearbox-selection.html): supplied reference covers 100:1–900:1 total ratios and approximately 14–1.6 rpm at a 1400 rpm input. DRV030/063 with a 0.12 kW motor and 10 × 50 stages is a listed preliminary 500:1 example; verify torque, duty and mounting for the final configuration. Source: SMK published selection reference, November 2026.
 - [UDL002 0.18 kW stepless speed variator](https://www.smktrans.com/news-udl002-018kw-stepless-speed-variator.html): 1.6–8.2 adjustable speed ratio; 11 mm input bore and output shaft; 23 mm output shaft length; 140 mm flange; 115 mm diagonal mounting distance. Source: SMK published dimension reference, November 2026.
 - [UDL005B5 variable speed drive](https://www.smktrans.com/news-udl005b5-variable-speed-drive-dimensions.html): 1.4–7 adjustable speed ratio; 14 mm input bore and output shaft; 30 mm output shaft length; 160 mm flange; 130 mm diagonal bolt distance. Source: SMK published dimension reference, November 2026.
 - [UDL010B5 variable speed drive](https://www.smktrans.com/news-udl010b5-variable-speed-drive-dimensions.html): 1.4–7 adjustable speed ratio; 19 mm input bore and output shaft; 40 mm output shaft length; 200 mm flange; 165 mm diagonal mounting distance. Source: SMK published dimension reference, November 2026.
