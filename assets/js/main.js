@@ -124,15 +124,6 @@ const toggle=document.querySelector('.mobile-toggle');
 const menu=document.querySelector('.menu');
 if(toggle&&menu){toggle.addEventListener('click',()=>{const isOpen=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));});}
 
-// Keep the newest published engineering guide visible at the top of the knowledge-center grid.
-const newsGrid=document.querySelector('.news-grid');
-if(newsGrid&&window.location.pathname.endsWith('/news.html')){
-  const latestDrvGuide=document.createElement('article');
-  latestDrvGuide.className='news-card';
-  latestDrvGuide.innerHTML='<div class="news-thumb"><img src="assets/images/drv-double-reduction-worm-gearbox-assembly.jpg" alt="DRV double reduction worm gearbox assembly" width="4096" height="3072" loading="eager" decoding="async"></div><div><small>November 10, 2026</small><h3>How to Select a DRV Double Reduction Worm Gearbox</h3><p>Use the supplied 100:1–900:1 ratio and low-speed reference to start a DRV two-stage gearbox selection.</p><a class="btn small" href="news-drv-double-reduction-worm-gearbox-selection.html">READ GUIDE &rarr;</a></div>';
-  newsGrid.prepend(latestDrvGuide);
-}
-
 // Use one consistent red PDF icon for every navigation catalog link.
 const catalogNavIcon='<svg class="catalog-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 7V3.5L18.5 9H13ZM8 13h3a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1v2H8v-5Zm2 1v1h1v-1h-1Zm3-1h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2v-5Zm2 2h-1v1h1v-1Zm2-2h3v1h-1v1h1v1h-1v2h-2v-5Z"/></svg>';
 document.querySelectorAll('.menu a[href$=".pdf"]').forEach((link)=>{
@@ -330,6 +321,18 @@ function addUdl010b5KnowledgeCard(){
   card.innerHTML='<div class="news-thumb">&#9881;</div><div><small>November 5, 2026</small><h3>UDL010B5 Variable Speed Drive Dimensions</h3><p>Check the B5 flange, 19 mm shafts, 1.4–7 ratio, torque and 0.55/0.75 kW motor options.</p><a class="btn small" href="news-udl010b5-variable-speed-drive-dimensions.html">READ GUIDE &rarr;</a></div>';
   grid.prepend(card);
 }
+
+// Keep the newest published engineering guide first in the Knowledge Center.
+function addDrvDoubleReductionKnowledgeCard(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid||document.querySelector('[data-drv-double-reduction-news]')) return;
+  const card=document.createElement('article');
+  card.className='news-card';
+  card.dataset.drvDoubleReductionNews='true';
+  card.innerHTML='<div class="news-thumb"><img src="assets/images/drv-double-reduction-worm-gearbox-assembly.jpg" alt="DRV double reduction worm gearbox assembly" width="4096" height="3072" loading="eager" decoding="async"></div><div><small>November 10, 2026</small><h3>How to Select a DRV Double Reduction Worm Gearbox</h3><p>Use the supplied 100:1–900:1 ratio and low-speed reference to start a DRV two-stage gearbox selection.</p><a class="btn small" href="news-drv-double-reduction-worm-gearbox-selection.html">READ GUIDE &rarr;</a></div>';
+  grid.prepend(card);
+}
+
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -408,6 +411,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addUdl002SpeedVariatorKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl005b5KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl010b5KnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addDrvDoubleReductionKnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
@@ -421,6 +425,7 @@ if(document.readyState==='loading'){
   addUdl002SpeedVariatorKnowledgeCard();
   addUdl005b5KnowledgeCard();
   addUdl010b5KnowledgeCard();
+  addDrvDoubleReductionKnowledgeCard();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
