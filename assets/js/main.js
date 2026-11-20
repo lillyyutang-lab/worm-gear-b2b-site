@@ -152,7 +152,6 @@ function ensureFloatingAction(className,ariaLabel,markup){
   return link;
 }
 
-ensureFloatingAction('whatsapp-float','Contact SMK on WhatsApp','<span class="float-icon">'+whatsappIcon+'</span><span class="sr-only">WhatsApp</span>');
 ensureFloatingAction('quote-float','Get a free quote from SMK','<span>Get a Free Quote</span>'+quoteIcon);
 
 document.querySelectorAll('a[href*="wa.me/"]').forEach((link)=>{
