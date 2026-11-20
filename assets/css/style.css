@@ -2181,3 +2181,8 @@ details p { margin: 10px 0 0; }
 .article-factory-evidence { margin: 22px 0 0; }
 .article-factory-evidence img { width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
 .article-factory-evidence figcaption { margin-top: 8px; color: #5b6d84; font-size: 14px; line-height: 1.55; }
+
+/* Products catalogue: four cards per desktop row without changing detail-page layouts. */
+.product-catalog-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 960px) { .product-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .product-catalog-grid { grid-template-columns: 1fr !important; } }
