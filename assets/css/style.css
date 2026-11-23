@@ -2236,3 +2236,9 @@ details p { margin: 10px 0 0; }
 .home-hero-visual img { width: 124%; max-width: none; max-height: 490px; transform: translateX(7%); }
 @media (max-width: 960px) { .home-hero-grid { grid-template-columns: 1fr; gap: 20px; } .home-hero-visual { justify-items: center; } .home-hero-visual img { width: 100%; max-width: 620px; max-height: 345px; transform: none; } }
 @media (max-width: 560px) { .home-hero-visual img { max-height: 240px; } }
+
+/* Give the header brand mark stronger presence on desktop without crowding the mobile navigation. */
+@media (min-width: 701px) {
+  .nav { height: 86px; }
+  .brand img { height: 62px; max-width: 118px; }
+}
