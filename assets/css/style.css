@@ -2252,7 +2252,7 @@ details p { margin: 10px 0 0; }
 /* Homepage factory hero: a real assembly-workshop photo remains behind live, accessible HTML copy. */
 .home-factory-hero { min-height: 590px; isolation: isolate; background: #041a3b; overflow: hidden; }
 .home-factory-bg { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
-.home-factory-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(2,17,48,.96) 0%, rgba(2,22,55,.80) 43%, rgba(2,25,62,.25) 76%, rgba(2,25,62,.42) 100%), linear-gradient(0deg, rgba(2,18,47,.28), transparent 55%); }
+.home-factory-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: radial-gradient(circle at 76% 40%, rgba(32,145,228,.18), transparent 40%), linear-gradient(90deg, rgba(1,14,40,.94) 0%, rgba(2,24,60,.78) 39%, rgba(3,39,82,.43) 62%, rgba(3,39,82,.16) 100%), linear-gradient(180deg, rgba(1,15,38,.16), rgba(1,15,38,.48) 100%); }
 .home-factory-content { max-width: 600px; padding: 98px 0; }
 .home-factory-kicker { margin: 0 0 13px; color: #8ed2ff; font-size: 13px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
 .home-factory-hero h1 { max-width: 11em; margin: 0 0 20px; font-size: clamp(42px, 4.6vw, 64px); line-height: 1.06; letter-spacing: -1.5px; }
