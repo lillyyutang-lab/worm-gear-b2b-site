@@ -2263,10 +2263,10 @@ details p { margin: 10px 0 0; }
 .home-factory-points li::before { content: "✓"; margin-right: 8px; color: #86d3ff; }
 .home-factory-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .home-factory-hero .outline { border-color: rgba(255,255,255,.9); color: #fff; }
-.home-factory-evidence { padding: 30px 32px; border: 1px solid rgba(151,211,255,.42); border-radius: 16px; background: linear-gradient(145deg, rgba(4,31,70,.78), rgba(3,22,54,.58)); box-shadow: 0 20px 44px rgba(0,10,32,.28); backdrop-filter: blur(5px); color: #eaf5ff; }
+.home-factory-evidence { padding: 10px 0; color: #eaf5ff; text-shadow: 0 2px 14px rgba(0,11,34,.92); }
 .home-factory-evidence-label { margin: 0 0 9px; color: #87d1ff; font-size: 12px; font-weight: 900; letter-spacing: 1.8px; text-transform: uppercase; }
 .home-factory-evidence h2 { margin: 0 0 16px; color: #fff; font-size: clamp(23px, 2vw, 30px); line-height: 1.18; }
-.home-factory-evidence p:not(.home-factory-evidence-label) { margin: 0 0 14px; color: #e5f2ff; font-size: 15px; line-height: 1.65; }
+.home-factory-evidence p:not(.home-factory-evidence-label) { margin: 0 0 14px; color: #f2f8ff; font-size: 15px; line-height: 1.65; }
 .home-factory-evidence p:last-child { margin-bottom: 0; }
 @media (max-width: 960px) { .home-factory-hero { min-height: 560px; } .home-factory-grid { grid-template-columns: 1fr; gap: 8px; min-height: 0; padding: 62px 0; } .home-factory-content { padding: 0; } .home-factory-evidence { max-width: 700px; } .home-factory-hero::before { background: linear-gradient(180deg, rgba(2,17,48,.70), rgba(2,17,48,.92)); } }
 @media (max-width: 560px) { .home-factory-hero { min-height: 600px; } .home-factory-bg { object-position: 58% center; } .home-factory-grid { padding: 52px 0; } .home-factory-hero h1 { font-size: 38px; } .home-factory-summary { font-size: 16px; } .home-factory-points { grid-template-columns: 1fr 1fr; gap: 9px 14px; margin: 24px 0 28px; font-size: 14px; } .home-factory-actions { display: grid; grid-template-columns: 1fr; } .home-factory-actions .btn { width: 100%; } .home-factory-evidence { padding: 24px 22px; } }
