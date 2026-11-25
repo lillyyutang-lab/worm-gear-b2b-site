@@ -352,6 +352,14 @@ function addLatestKnowledgeCards(){
     ghgvCard.innerHTML='<div class="news-thumb" aria-hidden="true">&#9881;</div><div><small>November 25, 2026</small><h3>GH vs GV Geared Motor Mounting: Foot &amp; Flange Dimensions</h3><p>Compare GH foot-mounted and GV flange-mounted gear motors, then check the dimensions that matter for a confident replacement.</p><a class="btn small" href="blog-gh-gv-geared-motor-mounting-dimensions.html">READ GUIDE &rarr;</a></div>';
     grid.prepend(ghgvCard);
   }
+
+  if(!document.querySelector('[data-gh-gv-model-news]')){
+    const modelCard=document.createElement('article');
+    modelCard.className='news-card';
+    modelCard.dataset.ghGvModelNews='true';
+    modelCard.innerHTML='<div class="news-thumb" aria-hidden="true">&#9881;</div><div><small>November 25, 2026</small><h3>How to Read a GH/GV Geared Motor Model Number</h3><p>Understand GH/GV model fields, estimate output speed and prepare the details needed for a replacement quote.</p><a class="btn small" href="blog-gh-gv-geared-motor-model-number.html">READ GUIDE &rarr;</a></div>';
+    grid.prepend(modelCard);
+  }
 }
 
 // Match the established blog conversion entry on the RV25 dimensional guide.
