@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/products.html",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
       "source": "/news-are-worm-gearboxes-self-locking.html",
       "destination": "/news-are-worm-gearboxes-self-locking-engineering-guide.html",
       "permanent": true
@@ -16,7 +21,22 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/products",
+      "destination": "/products.html"
+    }
+  ],
   "headers": [
+    {
+      "source": "/products",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
+        }
+      ]
+    },
     {
       "source": "/assets/images/(.*)",
       "headers": [
