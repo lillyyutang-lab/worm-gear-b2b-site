@@ -332,6 +332,28 @@ function addDrvDoubleReductionKnowledgeCard(){
   grid.prepend(card);
 }
 
+// Keep the latest published guides above older dynamically added Knowledge Center cards.
+function addLatestKnowledgeCards(){
+  const grid=document.querySelector('.news-grid');
+  if(!grid) return;
+
+  if(!document.querySelector('[data-worm-selection-news]')){
+    const selectionCard=document.createElement('article');
+    selectionCard.className='news-card';
+    selectionCard.dataset.wormSelectionNews='true';
+    selectionCard.innerHTML='<div class="news-thumb" aria-hidden="true">&#9881;</div><div><small>November 25, 2026</small><h3>Worm Gearbox Selection Checklist: Ratio, Torque &amp; NMRV040 Example</h3><p>Use a practical checklist to confirm ratio, output speed, torque, motor connection and mounting before requesting a worm gearbox quote.</p><a class="btn small" href="blog-worm-gearbox-selection-checklist.html">READ GUIDE &rarr;</a></div>';
+    grid.prepend(selectionCard);
+  }
+
+  if(!document.querySelector('[data-gh-gv-news]')){
+    const ghgvCard=document.createElement('article');
+    ghgvCard.className='news-card';
+    ghgvCard.dataset.ghGvNews='true';
+    ghgvCard.innerHTML='<div class="news-thumb" aria-hidden="true">&#9881;</div><div><small>November 25, 2026</small><h3>GH vs GV Geared Motor Mounting: Foot &amp; Flange Dimensions</h3><p>Compare GH foot-mounted and GV flange-mounted gear motors, then check the dimensions that matter for a confident replacement.</p><a class="btn small" href="blog-gh-gv-geared-motor-mounting-dimensions.html">READ GUIDE &rarr;</a></div>';
+    grid.prepend(ghgvCard);
+  }
+}
+
 // Match the established blog conversion entry on the RV25 dimensional guide.
 function addRv25SelectionCta(){
   if(!location.pathname.endsWith('/news-rv25-worm-gearbox-dimensions.html')) return;
@@ -411,6 +433,7 @@ if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',addUdl005b5KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addUdl010b5KnowledgeCard,{once:true});
   document.addEventListener('DOMContentLoaded',addDrvDoubleReductionKnowledgeCard,{once:true});
+  document.addEventListener('DOMContentLoaded',addLatestKnowledgeCards,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25SelectionCta,{once:true});
   document.addEventListener('DOMContentLoaded',addRv25TechnicalResources,{once:true});
   document.addEventListener('DOMContentLoaded',addHypoidSelectionFaq,{once:true});
@@ -425,6 +448,7 @@ if(document.readyState==='loading'){
   addUdl005b5KnowledgeCard();
   addUdl010b5KnowledgeCard();
   addDrvDoubleReductionKnowledgeCard();
+  addLatestKnowledgeCards();
   addRv25SelectionCta();
   addRv25TechnicalResources();
   addHypoidSelectionFaq();
